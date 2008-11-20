@@ -1,0 +1,40 @@
+
+Project myTunes
+----------------------
+
+Welcome.
+
+Getting Started
+---------------
+
+  - create a model class, conforming to the conventions
+  - described in the documentation (see jmatter/doc/guide.pdf)
+  - add type to src/com/u2d/class-list.json
+
+  Then:
+   ant genhbm
+      ..will automatically create hibernate hbm.xml mapping files for your model classes
+      you can navigate through the package hierarchy under build/classes and locate the
+       generated hbm.xml files for your model classes.
+   ant schema-export
+      ..will automatically create and export the ddl to your database
+      you should be able to connect to your database and see the generated tables at
+      this point.
+
+  Place image files for your new type in resources/images
+    (see the README file in that directory)
+
+  Then:
+    ant run
+
+   ..will automatically launch your application.  by default, a single user will
+   already exist in the system:  username: admin with password: admin
+   passwords are hashed and then stored in the database.  Feel free to create
+   new users via the gui.
+
+   If you wish to customize a splash screen for your application, simply
+   put a "splash.gif" (or png or jpg) in resources/images.
+
+
+Thank you for using JMatter.
+/ Eitan

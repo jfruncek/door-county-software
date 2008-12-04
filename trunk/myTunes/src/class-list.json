@@ -8,6 +8,10 @@
         "items": {
           "item-type": "com.u2d.model.ComplexType",
           "items": [
+	    { "value": "com.door.mytunes.Song" },
+	    { "value": "com.door.mytunes.Album" },
+	    { "value": "com.door.mytunes.Artist" },
+	    { "value": "com.door.mytunes.Genre" },
             { "value": "com.u2d.type.composite.Folder" },
             { "value": "com.u2d.find.CompositeQuery" }
           ]

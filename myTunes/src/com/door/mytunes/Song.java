@@ -20,7 +20,7 @@ public class Song extends AbstractComplexEObject {
     private final Genre _genre = new Genre();
     
     public static final String[] fieldOrder = {"title", "duration", "artist", "album", "genre"};
-
+    public static final String albumInverseFieldName = "songs";
 
     public Song() {
     }

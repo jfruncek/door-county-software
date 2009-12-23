@@ -1,0 +1,18 @@
+#Code snippets
+
+=JSP=
+
+==Output a map (for debugging)==
+
+{{{
+<s:iterator id="entry" value="scheduleParameters">
+  <tr>
+    <td>
+      <s:property value="key"/>
+    </td>
+    <td>
+      <s:property value="value"/>
+    </td>
+  </tr>
+</s:iterator>
+}}}

@@ -1,5 +1,3 @@
-#Code snippets
-
 =JSP=
 
 ==Output a map (for debugging)==

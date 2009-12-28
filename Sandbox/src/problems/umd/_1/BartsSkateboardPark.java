@@ -49,7 +49,7 @@ public class BartsSkateboardPark {
             Writer w = new PrintWriter(file);
             for (Iterator<Integer> it = largest.iterator(); it.hasNext();) {
                 Integer integer = it.next();
-                w.write(integer);
+                w.write(integer.toString());
                 if (it.hasNext()) {
                   w.write(" ");
                 }

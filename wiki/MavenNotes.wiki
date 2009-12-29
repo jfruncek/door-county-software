@@ -1,10 +1,10 @@
 = Conventions =
-* Standard directory layout for projects
-* A single Maven project produces a single output
-* Standard naming conventions (such as {{{commons-logging-1.2.jar}}}
+  * Standard directory layout for projects
+  * A single Maven project produces a single output
+  * Standard naming conventions (such as {{{commons-logging-1.2.jar}}}
 
 Maven's Super POM carries with it all the default conventions that Maven encourages, and is the analog of the Java language's java.lang.Object class.
 
 = Plugins ==
-* everything accomplished in Maven is the result of a plugin executing
-* execution is coordinated by Maven's build life cycle in a declarative fashion
+  * everything accomplished in Maven is the result of a plugin executing
+  * execution is coordinated by Maven's build life cycle in a declarative fashion

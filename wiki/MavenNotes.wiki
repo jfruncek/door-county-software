@@ -8,3 +8,7 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
 = Plugins ==
   * everything accomplished in Maven is the result of a plugin executing
   * execution is coordinated by Maven's build life cycle in a declarative fashion
+
+= Links =
+
+[http://www.sonatype.com/people/2009/04/how-to-convert-from-ant-to-maven-in-5-minutes/ Convert Ant to Maven]

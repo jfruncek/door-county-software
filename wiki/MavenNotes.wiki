@@ -17,3 +17,7 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
 = Links =
 
 [http://www.sonatype.com/people/2009/04/how-to-convert-from-ant-to-maven-in-5-minutes/ Convert Ant to Maven]
+
+[http://blog.springsource.com/2009/12/02/obtaining-spring-3-artifacts-with-maven/ Obtaining Spring 3 with Maven]
+
+[http://repo1.maven.org/maven2/ Maven Central]

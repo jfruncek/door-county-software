@@ -12,6 +12,7 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
 = Dependencies ==
 
   * The dependencies contained within the {{{dependencyManagement}}} element are used only to state the preference for a version and by themselves do not affect a project's dependency graph, whereas the top-level {{{dependencies}}} element does. _This means that a dependency *must* be inherited or explicitly declared in the {{{dependencies}}} element. Also version is required in the {{{dependencyManagement}}} element but not in the {{{dependencies}}} element_
+  * order of elements doesn't matter
 
 = Links =
 

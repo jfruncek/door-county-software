@@ -9,6 +9,12 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
   * everything accomplished in Maven is the result of a plugin executing
   * execution is coordinated by Maven's build life cycle in a declarative fashion
 
+= Dependencies ==
+
+  * The dependencies element contained within the dependencyManagement element areused only to state the preference for a version and by itself does not affect a project's dependency graph, whereas the top-level dependencies element does affect the dependency graph
+
+_not totally sure what this means yet- version is required in the dependencyManagement element but not in the dependencies element_
+
 = Links =
 
 [http://www.sonatype.com/people/2009/04/how-to-convert-from-ant-to-maven-in-5-minutes/ Convert Ant to Maven]

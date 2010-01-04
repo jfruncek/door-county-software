@@ -21,3 +21,16 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
 [http://blog.springsource.com/2009/12/02/obtaining-spring-3-artifacts-with-maven/ Obtaining Spring 3 with Maven]
 
 [http://repo1.maven.org/maven2/ Maven Central]
+
+[http://maven.apache.org/ The Maven Project]
+
+[http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html Maven Standard Directory layout]
+
+= Interesting Maven commands =
+|| *Command* || *Description* || *Link* ||
+||{{{mvn -h}}}||Maven command line options|| ||
+||{{{mvn help:describe -Dplugin=org.apache.maven.plugins:maven-jarsigner-plugin -Ddetail}}} || describes goals and parameters for a plugin || ||
+||{{{mvn help:effective-pom}}}||Combines the project POM with the contents of all parent POMs, user settings, and any active profiles. This goal can come in handy if you are trying to debug a build and want to see how all of the current project's ancestor POMs are contributing to the effective POM. ||[http://maven.apache.org/pom.html#Inheritance Inheritance] ||
+||{{{mvn help:evaluate}}}||interactively evaluate maven expressions, for example you can use this to display the value of a property || ||
+||{{{mvn dependency:analyze}}}||finds undeclared dependencies and unused declared dependencies||[http://maven.apache.org/plugins/maven-dependency-plugin/usage.html Dependency Plugin] ||
+||{{{mvn dependency:tree}}}|| displays dependencies in a tree || ||

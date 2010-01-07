@@ -14,7 +14,6 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
   * everything accomplished in Maven is the result of a plugin executing
   * execution is coordinated by Maven's build life cycle in a declarative fashion
   * To change compiler settings, use
-
 {{{
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
@@ -23,6 +22,16 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
   <configuration>
     <source>6</source>
     <target>6</target>
+  </configuration>
+</plugin>
+}}}
+  * To ignore test results and continue the build
+{{{
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <configuration>
+    <testFailureIgnore>true</testFailureIgnore>
   </configuration>
 </plugin>
 }}}

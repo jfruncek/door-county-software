@@ -5,16 +5,31 @@
 
 Maven's Super POM carries with it all the default conventions that Maven encourages, and is the analog of the Java language's java.lang.Object class.
 
-= Plugins ==
-  * everything accomplished in Maven is the result of a plugin executing
-  * execution is coordinated by Maven's build life cycle in a declarative fashion
-
 = Dependencies ==
 
   * The dependencies contained within the {{{dependencyManagement}}} element are used only to state the preference for a version and by themselves do not affect a project's dependency graph, whereas the top-level {{{dependencies}}} element does. _This means that a dependency *must* be inherited or explicitly declared in the {{{dependencies}}} element. Also version is required in the {{{dependencyManagement}}} element but not in the {{{dependencies}}} element_
   * order of elements doesn't matter
 
+= Plugins ==
+  * everything accomplished in Maven is the result of a plugin executing
+  * execution is coordinated by Maven's build life cycle in a declarative fashion
+  * To change compiler settings, use
+
+{{{
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>2.0.2</version>
+  <configuration>
+    <source>6</source>
+    <target>6</target>
+  </configuration>
+</plugin>
+}}}
+  
 = Links =
+
+[http://door-county-software.googlecode.com/files/maven-definitive-guide.pdf The Definitive Guide]
 
 [http://www.sonatype.com/people/2009/04/how-to-convert-from-ant-to-maven-in-5-minutes/ Convert Ant to Maven]
 

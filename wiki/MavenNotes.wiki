@@ -38,7 +38,9 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
   
 = Links =
 
-[http://door-county-software.googlecode.com/files/maven-definitive-guide.pdf The Definitive Guide]
+[http://www.maestrodev.com/better-build-maven Better Builds with Maven]
+
+[http://door-county-software.googlecode.com/files/maven-definitive-guide.pdf Maven- The Definitive Guide]
 
 [http://www.sonatype.com/people/2009/04/how-to-convert-from-ant-to-maven-in-5-minutes/ Convert Ant to Maven]
 

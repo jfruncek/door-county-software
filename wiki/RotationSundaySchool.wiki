@@ -1,0 +1,26 @@
+=Design for RSS domain=
+                                         
+==Nouns==
+  * School Year
+  * Calendar Week
+  * Rotation
+  * Teacher
+  * Service (9 or 10:30)
+  * Grade (K, 1st, 2nd, 3rd, 4th, 5th, 6th)
+  * Rotation Class (one or more grades)
+  * Shepherd
+  * Subjects (Art, Music, Games, Science, Puppets, Storytelling, Computers)
+
+==Nouns Out of Scope==
+  * Stand-alone Class
+
+==Behaviors==
+  # schedule Rotation (Give it a Name (theme) and assign it Calendar Weeks (5-6) & Subjects)
+  # schedule Services, Rotation Classes; assign to its
+
+==Relationships==
+  # School Year has Rotations
+  # Rotation has Subjects (4-5) and Teachers and Calendar Weeks
+  # Calendar Week has Services
+  # Service has Rotation Classes 
+  # Classes have Grade(s) and Teacher(s) and a Subject

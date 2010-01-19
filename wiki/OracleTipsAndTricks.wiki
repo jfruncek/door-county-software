@@ -1,0 +1,9 @@
+#summary One-sentence summary of this page.
+
+= Search BLOBs =
+
+{{{
+select job_name, job_group, description, job_class_name 
+  from openreports.qrtz_job_details t
+ where dbms_lob.instr(t.job_data,utl_raw.cast_to_raw('<search text>'))>0
+}}}

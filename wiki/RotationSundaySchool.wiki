@@ -1,4 +1,4 @@
-=Design for RSS domain=
+#summary Design for RSS domain
                                          
 ==Nouns==
   * School Year

@@ -1,4 +1,4 @@
-#Attempt at clean JMatter build on cygwin
+#summary Attempt at clean JMatter build on cygwin
 
 {{{
 JMatter Build Notes

@@ -10,17 +10,27 @@
   * Rotation Class (one or more grades)
   * Shepherd
   * Subjects (Art, Music, Games, Science, Puppets, Storytelling, Computers)
+  * Special Events
 
 ==Nouns Out of Scope==
   * Stand-alone Class
 
 ==Behaviors==
   # schedule Rotation (Give it a Name (theme) and assign it Calendar Weeks (5-6) & Subjects)
-  # schedule Services, Rotation Classes; assign to its
+  # schedule Services, Rotation Classes; Assign one or more Grades, a Subject, and a Service
+  # schedule Teacher: Assign a teacher to a Rotation Class
+  # schedule Shepherd: Assign a shepherd to one or more Grades
+
 
 ==Relationships==
   # School Year has Rotations
-  # Rotation has Subjects (4-5) and Teachers and Calendar Weeks
+  # Rotation has Subjects (4-5) and Calendar Weeks
   # Calendar Week has Services
   # Service has Rotation Classes 
-  # Classes have Grade(s) and Teacher(s) and a Subject
+  # Classes have Grade(s) and Teacher(s), a Subject and a Service
+  # Grade has a Shepherd
+
+== Time Tracking ==
+
+12-10-2009 1h 30m Begin design document
+12-10-2009 30m refactor design; flesh out behaviors

@@ -1,0 +1,113 @@
+{{{
+http://appfuse.org/display/APF/AppFuse+QuickStart 
+
+Install at /usr/local/tools in d:/cygwin:
+
+1. jdk1.6.0_03
+
+    Set environment variables: PATH = %PATH%;%ANT_HOME%/bin;%JAVA_HOME%/bin
+
+2. mysql-5.0.45-win32 
+
+      nohup ./mysqld-nt.exe &   #starts mysql, next change root pwd
+      ./mysql.exe --user=root --pass='' mysql -e "update user set password=password('cedartree01') where user='root'; flush privileges;"
+      ./mysql.exe --user=root --pass='cedartree01'   #creates a client window for sql
+
+3. maven-2.0.7 (& Ant 1.6.5 for fun)
+
+4. james-2.3.1
+   
+      nohup ./run.sh &
+
+Create a new project.
+
+1. From ~/dev, run the maven archetype for your chosen stack.
+
+  mvn archetype:create -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-basic-struts -DremoteRepositories=http://static.appfuse.org/releases -DarchetypeVersion=2.0 -DgroupId=com.door.app -DartifactId=myproject
+
+2. Update in the pom.xml the <jdbc.password> property for default mysql db (near bottom of the file).
+
+    try postgres next time!
+
+3. Import project into subversion (uses Google code's generated password stored by svn)
+
+    svn import -m "First project" myproject https://appfuse2.googlecode.com/svn/trunk/myproject --username fishribs
+    svn list http://appfuse2.googlecode.com/svn/trunk/  #lists svn repo
+    mv myproject myproject.1  #moves current copy out of the way
+    svn checkout http://appfuse2.googlecode.com/svn/trunk/myproject
+
+4. Run and view the application
+
+   cd into your new project's directory and run mvn
+   run mvn jetty:run-war from your project's directory
+   Browse to http://localhost:8080
+
+
+Create and install an entity
+
+1. Generate an issue entity by running mvn appfuse:gen-model after creating the table.
+
+create table issue 
+ (id bigint not null auto_increment, 
+  primary key (id),
+  summary varchar(80),
+  reporter varchar(40),
+  assignee varchar(40),
+  status int,
+  priority int,
+  severity int,
+  resolution int,
+  created datetime
+  ) 
+
+2. Generate CRUD using mvn appfuse:gen -Dentity=Issue -DdisableInstallation=true 
+
+     /src/main/java/com/door/issuetracker/webapp/action/
+
+     - Generates IssueAction.java
+
+     /src/main/resources
+
+     - Adds the entity to hibernate.cfg.xml
+
+    /src/main/resources/com/door/issuetracker/model
+
+    - Generates Issue-validation.xml (empty since no constraints)
+
+    /src/main/resources/com/door/issuetracker/webapp/action
+
+    - Not sure about IssueAction-validation.xml
+
+    /src/main/webapp/WEB-INF/pages
+
+    - Generates issueForm.jsp & issueList.jsp
+
+    /src/test/java/com/door/issuetracker/webapp/action
+ 
+    - Generates test class IssueActionTest.java
+
+3. Install the entity with mvn appfuse:install -Dentity=Issue
+
+     /src/main/resources
+
+     - Adds page messages (including table headings) to ApplicationResources.properties
+     - Adds action - result mappings to struts.xml
+     
+    /src/main/webapp/common
+
+    - Adds main menu item to menu.jsp
+
+    /src/main/webapp/WEB-INF/
+
+    - Adds DAO to applicationContext.xml
+    - Adds menu target page mapping to menu-config.xml
+
+    /src/test/resources
+
+    - Adds test data to sample-data.xml
+    - Adds canoo tests to web-tests.xml
+
+?. tomcat/conf/tomcat-users.xml
+<user username="jfruncek" password="cedartree01" roles="admin,manager"/>
+
+}}}

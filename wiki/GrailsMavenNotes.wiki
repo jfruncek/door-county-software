@@ -1,0 +1,51 @@
+Creating a Grails project with Maven is a bit difficult mainly because the archetype is incomplete. 
+
+  # Create project from Maven Archetype
+{{{
+ Group Id: org.grails
+ Artifact Id: grails-maven-archetype
+ Version: 1.2.0
+}}}
+  # Install missing grails plugins
+
+{{{
+mvn grails:install-plugin \-DpluginName=hibernate
+
+mvn grails:install-plugin \-DpluginName=tomcat
+
+mvn grails:install-plugin \-DpluginName=testing
+}}}
+
+  # Setup environment variables
+
+{{{set MAVEN-OPTS=-Xmx512m \-XX:MaxPermSize=256m}}}
+
+  # Add pom dependencies [GRAILS-5677|http://jira.codehaus.org/browse/GRAILS-5677]
+
+{{{
+<dependency>
+   <groupId>org.grails</groupId>
+   <artifactId>grails-bootstrap</artifactId>
+   <version>1.2.0</version>
+   <scope>runtime</scope>
+</dependency>
+<dependency>
+   <groupId>javassist</groupId>
+   <artifactId>javassist</artifactId>
+   <version>3.8.0.GA</version>
+   <scope>runtime</scope>
+</dependency>
+}}}
+
+  # Change pom dependency
+
+{{{
+<dependency>
+   <groupId>org.slf4j</groupId>
+   <artifactId>slf4j-log4j12</artifactId>
+   <version>1.5.x</version> <\!-\- to the version of slf4j-api-1.5.x.jar in Maven Dependencies \-->
+   <scope>runtime</scope>
+</dependency>
+}}}
+
+  # Change bulid final name to short war name without .war extension

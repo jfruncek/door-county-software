@@ -1,4 +1,4 @@
-#Intend to work through book _Building Software Applications with JMatter_ using Ubuntu/NetBeans.
+#summary Intend to work through book _Building Software Applications with JMatter_ using Ubuntu/NetBeans.
 
 
 =Initial Setup=
@@ -66,8 +66,6 @@ jmatter.home=/home/john/jmatter-20081002
 4. Decide to give up on SVN for now and start section 5.10.
 
 Dec 27
-
-
 
 
 

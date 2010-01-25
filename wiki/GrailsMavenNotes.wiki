@@ -7,7 +7,6 @@ Creating a Grails project with Maven is a bit difficult mainly because the arche
  Version: 1.2.0
 }}}
   # Install missing grails plugins
-
 {{{
 mvn grails:install-plugin \-DpluginName=hibernate
 
@@ -15,13 +14,9 @@ mvn grails:install-plugin \-DpluginName=tomcat
 
 mvn grails:install-plugin \-DpluginName=testing
 }}}
-
   # Setup environment variables
-
 {{{set MAVEN-OPTS=-Xmx512m \-XX:MaxPermSize=256m}}}
-
   # Add pom dependencies [GRAILS-5677|http://jira.codehaus.org/browse/GRAILS-5677]
-
 {{{
 <dependency>
    <groupId>org.grails</groupId>
@@ -36,9 +31,7 @@ mvn grails:install-plugin \-DpluginName=testing
    <scope>runtime</scope>
 </dependency>
 }}}
-
   # Change pom dependency
-
 {{{
 <dependency>
    <groupId>org.slf4j</groupId>
@@ -47,5 +40,4 @@ mvn grails:install-plugin \-DpluginName=testing
    <scope>runtime</scope>
 </dependency>
 }}}
-
   # Change bulid final name to short war name without .war extension

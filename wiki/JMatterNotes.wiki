@@ -13,7 +13,7 @@ $ tar -xzvf Desktop/jmatter-20081002.tgz
   # Create a NetBeans 6.1 project and template for the JMatter ACO object.
   # Import project to Googlecode
 
-{{
+{{{
 $ svn import myTunes https://door-county-software.googlecode.com/svn/trunk -m 'initial import'
 }}}
 
@@ -66,8 +66,6 @@ jmatter.home=/home/john/jmatter-20081002
 4. Decide to give up on SVN for now and start section 5.10.
 
 Dec 27
-
-
 
 
 

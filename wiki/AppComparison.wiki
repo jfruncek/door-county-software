@@ -2,6 +2,8 @@
  
 [http://www.google.com/apps/intl/en/business/features.html Google Apps benefits]
 
+[http://www.google.com/apps/intl/en/business/switch_exchange.html view these videos]
+
 || *Feature* || *M$ Office* || *Google Apps* || *Zoho* ||
 ||  ||  ||  ||
 ||  ||  ||  ||

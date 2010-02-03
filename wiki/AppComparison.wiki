@@ -1,6 +1,8 @@
 #summary Feature grid for M$ Office vs. Google Apps vs. Zoho (maybe)
  
-|| *Feature* || *M$ Office* | *Google Apps* || *Zoho* ||
+[http://www.google.com/apps/intl/en/business/features.html Google Apps benefits]
+
+|| *Feature* || *M$ Office* || *Google Apps* || *Zoho* ||
 ||  ||  ||  ||
 ||  ||  ||  ||
 ||  ||  ||  ||

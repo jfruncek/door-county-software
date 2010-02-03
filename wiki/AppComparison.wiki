@@ -1,0 +1,13 @@
+#summary Feature grid for M$ Office vs. Google Apps vs. Zoho (maybe)
+ 
+|| *Feature* || *M$ Office* | *Google Apps* || *Zoho* ||
+||  ||  ||  ||
+||  ||  ||  ||
+||  ||  ||  ||
+||  ||  ||  ||
+||  ||  ||  ||
+||  ||  ||  ||
+||  ||  ||  ||
+||  ||  ||  ||
+||  ||  ||  ||
+||  ||  ||  ||

@@ -1,17 +1,20 @@
 #summary Feature grid for M$ Office vs. Google Apps vs. Zoho (maybe)
+
+= Resources =
  
 [http://www.google.com/apps/intl/en/business/features.html Google Apps benefits]
 
 [http://www.google.com/apps/intl/en/business/switch_exchange.html view these videos]
 
+= Questions =
+
+  * What version of Exchange are we running?
+  * What is the size of our current Internet pipeline?
+  * How many in-boxes do we need?
+
+= Feature Grid =
+
 || *Feature* || *M$ Office* || *Google Apps* || *Zoho* ||
-||  ||  ||  ||
-||  ||  ||  ||
-||  ||  ||  ||
-||  ||  ||  ||
-||  ||  ||  ||
-||  ||  ||  ||
-||  ||  ||  ||
-||  ||  ||  ||
-||  ||  ||  ||
-||  ||  ||  ||
+|| Resource scheduling || yes || yes- Premier Edition ||  ||
+||  ||  ||  ||  ||
+||  ||  ||  ||  ||

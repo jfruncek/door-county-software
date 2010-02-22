@@ -2,6 +2,8 @@
 
 = Installation =
 
+Following Quick Start at http://www.joomla.org/download.html .
+
   * Install http://www.apachefriends.org/en/xampp-linux.html
 
 {{{
@@ -30,6 +32,6 @@ root@frubuntu:/opt/lampp/htdocs# cd /opt
 root@frubuntu:/opt/lampp/htdocs# chown -R john lampp
 }}}
 
-  * Subsequently chown'd back to root because of access errors
+  * At first admin pages at http://localhost/joomla15 worked. Subsequently chown'd back to root because of access errors after securing the server- but this did not fix the issues.
 
   * _Need to get mysql running and fix the page security_

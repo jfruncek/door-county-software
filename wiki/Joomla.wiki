@@ -8,19 +8,19 @@
 tar xvfz xampp-linux-1.7.3a.tar.gz -C /opt
 }}}
 
-  * Start xampp
+  * Start xampp - this fails to start mysql (at first because already running)
 
 {{{
 /opt/lampp/lampp start
 }}}
 
-  * Todo: this installation should be secured using
+  * Did subsequently secure using
 
 {{{
 /opt/lampp/lampp security
 }}}
 
-  * Make a web directory for Joomla
+  * Made a web directory for Joomla, downloaded and after the chown, extracted here.
 
 {{{
 root@frubuntu:/opt/lampp/htdocs# mkdir joomla15
@@ -30,6 +30,6 @@ root@frubuntu:/opt/lampp/htdocs# cd /opt
 root@frubuntu:/opt/lampp/htdocs# chown -R john lampp
 }}}
 
-  * Download Joomla and extract to web directory above
+  * Subsequently chown'd back to root because of access errors
 
-
+  * _Need to get mysql running and fix the page security_

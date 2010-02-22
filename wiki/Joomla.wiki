@@ -1,0 +1,21 @@
+#summary Installation procedure on Ubuntu 8.04
+
+= Installation =
+
+  # Install http://www.apachefriends.org/en/xampp-linux.html
+
+{{{
+tar xvfz xampp-linux-1.7.3a.tar.gz -C /opt
+}}}
+
+  # Start xampp
+
+{{{
+/opt/lampp/lampp start
+}}}
+
+  * Todo: this installation should be secured using
+
+{{{
+/opt/lampp/lampp security
+}}}

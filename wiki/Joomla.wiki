@@ -2,13 +2,13 @@
 
 = Installation =
 
-  # Install http://www.apachefriends.org/en/xampp-linux.html
+  * Install http://www.apachefriends.org/en/xampp-linux.html
 
 {{{
 tar xvfz xampp-linux-1.7.3a.tar.gz -C /opt
 }}}
 
-  # Start xampp
+  * Start xampp
 
 {{{
 /opt/lampp/lampp start
@@ -19,3 +19,17 @@ tar xvfz xampp-linux-1.7.3a.tar.gz -C /opt
 {{{
 /opt/lampp/lampp security
 }}}
+
+  * Make a web directory for Joomla
+
+{{{
+root@frubuntu:/opt/lampp/htdocs# mkdir joomla15
+root@frubuntu:/opt/lampp/htdocs# pwd
+/opt/lampp/htdocs
+root@frubuntu:/opt/lampp/htdocs# cd /opt
+root@frubuntu:/opt/lampp/htdocs# chown -R john lampp
+}}}
+
+  * Download Joomla and extract to web directory above
+
+

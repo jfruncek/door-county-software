@@ -30,3 +30,8 @@ root@frubuntu:/opt/lampp/htdocs# unzip -l Joomla_1.5.15-Stable-Full_Package.zip
 }}}
 
   * Finish Joomla install http://localhost/joomla15 
+
+{{{
+created joomla15/configuration.php from default in textbox
+moved installation folder to /tmp
+}}}

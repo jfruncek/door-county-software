@@ -35,3 +35,9 @@ root@frubuntu:/opt/lampp/htdocs# unzip -l Joomla_1.5.15-Stable-Full_Package.zip
 created joomla15/configuration.php from default in textbox
 moved installation folder to /tmp
 }}}
+
+  * Hitting Admin or default page gives lots of "Strict.." errors trying the following in etc/php.ini
+
+{{{
+error_reporting = E_ALL & ~E_NOTICE
+}}}

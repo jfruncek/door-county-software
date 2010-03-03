@@ -36,7 +36,7 @@ created joomla15/configuration.php from default in textbox
 moved installation folder to /tmp
 }}}
 
-  * Hitting Admin or default page gives lots of "Strict.." errors trying the following in etc/php.ini
+  * Hitting Admin or default page gives lots of "Strict.." errors. The following line in etc/php.ini does the trick (restart of lampp needed)
 
 {{{
 error_reporting = E_ALL & ~E_NOTICE

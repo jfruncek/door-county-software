@@ -52,6 +52,8 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
 
 [http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html Maven Standard Directory layout]
 
+[http://today.java.net/pub/a/today/2007/03/01/building-web-applications-with-maven-2.html Building Web Applications with Maven2]
+
 = Interesting Maven commands =
 || *Command* || *Description* || *Link* ||
 ||{{{mvn -h}}}||Maven command line options|| ||

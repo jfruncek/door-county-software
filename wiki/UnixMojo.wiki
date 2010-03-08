@@ -1,0 +1,7 @@
+#summary Various *nix shell commands that I've used
+
+Copy source, removing the '.svn' directories.
+
+{{{
+
+}}}

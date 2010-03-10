@@ -1,0 +1,18 @@
+#summary Notes on the process of creating a new website
+
+= Plan =
+
+  # Research existing similar websites
+  # Research advertising/promotion concepts
+  # Meet with client to share vision/ideas
+  # Choose platform/provider
+  # Choose domain name
+  # Sign up with provider
+  # Create content outline
+  # Create content (includes client written)
+  # Add content to site
+  # Implement advertising/promotion
+
+= Classic Acupuncture =
+
+This section documents actual experience building the site.

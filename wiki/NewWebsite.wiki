@@ -16,3 +16,14 @@
 = Classic Acupuncture =
 
 This section documents actual experience building the site.
+
+|| *Time Spent* || *Reason* ||
+|| 2h || Research similar websites/advertising options ||
+|| 1h || Research web hosting ||
+|| 15m || Meet regarding vision/ideas ||
+|| 3h || Install Joomla on Ubuntu 8.04 ||
+|| 1h || Debug installation ||
+|| 1h || Research domain naming/web hosting ||
+|| 1h || Create content outline ||
+||  ||  ||
+||  ||  ||

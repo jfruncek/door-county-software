@@ -1,0 +1,25 @@
+#summary Notes on various aspects of a Struts 2 - Hiberate app
+
+= Add new domain object =
+
+  # Add new `domain` class
+  # Add new database table (usually in a script)
+  # Create a hibernate mapping file (`.hbm.xml`)
+  # Add any needed associations in related domain objects and mapping files
+  # Create a manager or provider interface and implementation
+  # Register the new manager or provider bean with Spring
+  # Create an action class 
+  # Add new `ListDomain.jsp` and `EditDomain.jsp`
+  # Register the new action and jsp pages with Struts
+  # Find an icon or image 
+  # Add needed reader-friendly descriptions to `LocalStrings.properties`
+  # Add link(s) to the list page to related pages
+
+= Add a field to a domain object =
+
+  # Add new `field` and getter/setter to domain class
+  # Add hibernate mapping for in associated hibernate mapping file
+  # Add new column to database script - `FIELD nullable, varchar2(255)` etc.
+  # Add `label.field=<Description>` to `LocalStrings.properties` (serves as label text on jsp page)
+  # Add row to input table in form on associated jsp for new field
+  # Add new `field` and getter/setter to associated Action class

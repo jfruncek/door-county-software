@@ -20,10 +20,12 @@ This section documents actual experience building the site.
 || *Time Spent* || *Reason* ||
 || 2h || Research similar websites/advertising options ||
 || 1h || Research web hosting ||
-|| 15m || Meet regarding vision/ideas ||
+|| 15m || Meet with Deb regarding vision/ideas ||
 || 3h || Install Joomla on Ubuntu 8.04 ||
 || 1h || Debug installation ||
 || 1h || Research domain naming/web hosting ||
 || 1h || Create content outline ||
-||  ||  ||
-||  ||  ||
+|| 1hr || Meet with Deb for signup / content sharing ||
+|| 2hr || Initial Joomla install, tutorials and remove sample data  ||
+|| 2hr || Read Beginner's guide, install template, re-org. content ||
+|| || ||

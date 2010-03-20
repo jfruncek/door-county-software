@@ -32,3 +32,6 @@ This section documents actual experience building the site.
 || 30m || Debug links ||
 || || ||
 || || ||
+
+== Sign up Notes ==
+  * The 24 or 36 month period locks in a price for a longer time

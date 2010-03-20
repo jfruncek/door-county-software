@@ -30,7 +30,7 @@ This section documents actual experience building the site.
 || 2h || Read Beginner's guide, install template, re-org. content ||
 || 2h || Add content; debug links ||
 || 30m || Debug links ||
-|| || ||
+|| 4h || Finally get it looking like something; do DB a backup ||
 || || ||
 
 == Sign up Notes ==

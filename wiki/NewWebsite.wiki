@@ -29,9 +29,12 @@ This section documents actual experience building the site.
 || 2h || Initial Joomla install, tutorials and remove sample data  ||
 || 2h || Read Beginner's guide, install template, re-org. content ||
 || 2h || Add content; debug links ||
-|| 30m || Debug links ||
+|| 30m || Debug links - turned out to be the "search engine friendly" url setting ||
 || 4h || Finally get it looking like something; do DB a backup ||
-|| || ||
+|| _todo_ || Add the map ||
+|| _todo_ || Finish the content (including the bio) ||
+|| _todo_ || Amp up the style ||
+
 
 == Sign up Notes ==
   * The 24 or 36 month period locks in a price for a longer time

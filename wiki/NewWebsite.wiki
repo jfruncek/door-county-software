@@ -31,6 +31,7 @@ This section documents actual experience building the site.
 || 2h || Add content; debug links ||
 || 30m || Debug links - turned out to be the "search engine friendly" url setting ||
 || 4h || Finally get it looking like something; do DB a backup ||
+|| _todo_ || Add the intake form ||
 || _todo_ || Add the map ||
 || _todo_ || Finish the content (including the bio) ||
 || _todo_ || Amp up the style ||

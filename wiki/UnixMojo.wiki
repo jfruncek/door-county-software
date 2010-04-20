@@ -3,5 +3,11 @@
 Copy source, removing the '.svn' directories.
 
 {{{
+dont know that I ever made this work
+}}}
 
+Remove the .svn directories
+
+{{{
+find . -name '.svn' -exec rm -Rf '{}' \;
 }}}

@@ -33,6 +33,9 @@ This section documents actual experience building the site.
 || 4h || Finally get it looking like something; do DB a backup ||
 || 30m || Submitted listing request on http://www.dmoz.org/Health/Alternative/Acupuncture_and_Chinese_Medicine/Clinics_and_Practitioners/North_America/United_States/Wisconsin/ ||
 || 20m || Add the map - links are easy; iframes are omitted by the editor ||
+|| 1h || investigate wrapper plugin - it does iframe but how to place it? ||
+|| 30m || [http://extensions.joomla.org/extensions/site-management/seo-a-metadata/2796 Used this Joomla ext.] [https://www.google.com/webmasters/tools to verify the site] ||
+|| _todo_ || Check back for updates on Deb’s site on Google webmaster tools ||
 || _todo_ || other things in http://www.wikihow.com/Get-Your-Website-to-Show-up-on-the-Search-Engines ||
 || _todo_ || Add the intake form ||
 || _todo_ || Finish the content (including the bio) ||

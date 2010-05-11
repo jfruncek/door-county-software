@@ -112,10 +112,14 @@ create table issue
 
 }}}
 
+=Tutorials=
+
+[http://appfuse-demos.googlecode.com/svn/trunk Appfuse Demos]
+
 ==Error starting Sun's native2ascii: ==
 
 This is caused by the native2ascii plugin for Maven- remove it from the pom. [http://appfuse.markmail.org Search this for more info]
 
-=Annotation compile issue= 
+==Annotation compile issue==
 
 [http://issues.appfuse.org/browse/APF-1072 Solution]

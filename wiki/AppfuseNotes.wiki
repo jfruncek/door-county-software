@@ -111,3 +111,11 @@ create table issue
 <user username="jfruncek" password="cedartree01" roles="admin,manager"/>
 
 }}}
+
+==Error starting Sun's native2ascii: ==
+
+This is caused by the native2ascii plugin for Maven- remove it from the pom. [http://appfuse.markmail.org Search this for more info]
+
+=Annotation compile issue= 
+
+[http://issues.appfuse.org/browse/APF-1072 Solution]

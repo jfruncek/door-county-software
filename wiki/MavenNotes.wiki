@@ -63,3 +63,4 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
 ||{{{mvn dependency:analyze}}}||finds undeclared dependencies and unused declared dependencies||[http://maven.apache.org/plugins/maven-dependency-plugin/usage.html Dependency Plugin] ||
 ||{{{mvn dependency:tree}}}|| displays dependencies in a tree || ||
 ||{{{mvn dependency:tree -Dverbose -Dincludes=commons-collections}}}||limits scope of above|| ||
+|| {{{ mvn deploy:deploy-file -DgroupId=com.actuate -DartifactId=espreadsheet -Dversion=9.1 -Dpackaging=pom -Dfile=../com.actuate/pom.xml -DrepositoryId=mke-sisp-01.starkinvestments.com-releases -Durl=http://mke-sisp-01:5080/artifactory/third-party }}} || Deploy a resource to a local repo || ||

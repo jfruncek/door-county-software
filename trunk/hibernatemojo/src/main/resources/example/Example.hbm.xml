@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+
+    <class name="example.Chapter" table="MOJO_BOOK_CHAPTER" >
+        
+        <id name="id" column="CHAPTER_ID" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        
+        <property name="name" column="NAME" not-null="true" />
+        
+         <map name="parameters" table="MOJO_Chapter_Parameter" >
+            <key column="CHAPTER_ID"/>
+            <map-key column="NAME" type="string" />
+            <element column="VALUE" type="string"/>
+         </map>            
+                    
+    </class>
+    
+    <class name="example.ReportSchedule" table="MOJO_REPORT_SCHEDULE">
+        
+        <id name="id" column="SCHEDULE_ID" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        
+        <property name="name" column="NAME" not-null="true" />
+        
+         <map name="parameters">
+            <key column="SCHEDULE_ID"/>
+            <map-key column="NAME" type="string" />
+            <one-to-many class="example.ScheduleParameter" />
+         </map>            
+                    
+        <array name="deliveryMethods" table="MOJO_SCHEDULE_DELIVERY_METHOD">
+            <key column="DELIVERY_METHOD_ID"/>
+            <index column="DELIVERY_METHOD_INDEX"/>
+            <element column="DESCRIPTION" type="string"/>
+        </array>                    
+    </class>
+    
+    <class name="example.ScheduleParameter" table="MOJO_SCHEDULE_PARAMETER" >
+        <id name="id" column="PARAMETER_ID" type="java.lang.Integer">
+            <generator class="native" />
+        </id>
+        <set name="values" table="MOJO_SCHEDULE_PARAMETER_VALUE">
+            <key column="ID"/>
+            <element column="VALUE" type="string" not-null="true"/>
+        </set>
+    </class>
+    
+</hibernate-mapping>                    

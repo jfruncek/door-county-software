@@ -1,52 +1,60 @@
+=Prerequisites=
+
+Testing to point done on cygwin at `/usr/local/tools` in `c:/cygwin`
+
+  * Java (jdk1.6.0_03 - jdk1.6.0_14 tested)
+
+Set environment variables: PATH = %PATH%;%ANT_HOME%/bin;%JAVA_HOME%/bin
+
+  * Database (mysql-5.0.45-win32 and hsqldb tested)
+
 {{{
-http://appfuse.org/display/APF/AppFuse+QuickStart 
+> nohup ./mysqld-nt.exe &   #starts mysql, next change root pwd
+> ./mysql.exe --user=root --pass='' mysql -e "update user set password=password('cedartree01') where user='root'; flush privileges;"
+> ./mysql.exe --user=root --pass='cedartree01'   #creates a client window for sql
+}}}
 
-Install at /usr/local/tools in d:/cygwin:
+hsqldb works via profile choice in pom when running {{{mvn jetty:run-war}}}
 
-1. jdk1.6.0_03
+  * Maven (maven-2.0.7 and Eclipse embedded tested)
 
-    Set environment variables: PATH = %PATH%;%ANT_HOME%/bin;%JAVA_HOME%/bin
+  * SMTP server (optional) (james-2.3.1 tested)
 
-2. mysql-5.0.45-win32 
+{{{   
+> nohup ./run.sh &
+}}}
 
-      nohup ./mysqld-nt.exe &   #starts mysql, next change root pwd
-      ./mysql.exe --user=root --pass='' mysql -e "update user set password=password('cedartree01') where user='root'; flush privileges;"
-      ./mysql.exe --user=root --pass='cedartree01'   #creates a client window for sql
+=New Project=
 
-3. maven-2.0.7 (& Ant 1.6.5 for fun)
+  # From ~/dev, run the maven archetype for your chosen stack.
 
-4. james-2.3.1
-   
-      nohup ./run.sh &
+{{{
+> mvn archetype:create -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-basic-struts -DremoteRepositories=http://static.appfuse.org/releases -DarchetypeVersion=2.0 -DgroupId=com.door.app -DartifactId=myproject
+}}}
 
-Create a new project.
+  # Update in the pom.xml the <jdbc.password> property for default mysql db (near bottom of the file) *try postgres next time!*
 
-1. From ~/dev, run the maven archetype for your chosen stack.
+  # Import project into subversion (uses Google code's generated password stored by svn)
 
-  mvn archetype:create -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-basic-struts -DremoteRepositories=http://static.appfuse.org/releases -DarchetypeVersion=2.0 -DgroupId=com.door.app -DartifactId=myproject
+{{{
+> svn import -m "First project" myproject https://appfuse2.googlecode.com/svn/trunk/myproject --username fishribs
+> svn list http://appfuse2.googlecode.com/svn/trunk/  #lists svn repo
+> mv myproject myproject.1  #moves current copy out of the way
+> svn checkout http://appfuse2.googlecode.com/svn/trunk/myproject
+}}}
 
-2. Update in the pom.xml the <jdbc.password> property for default mysql db (near bottom of the file).
+  # Run and view the application
 
-    try postgres next time!
+{{{
+> cd <new project's directory>
+> mvn jetty:run-war
+Browse to http://localhost:8080
+}}}
 
-3. Import project into subversion (uses Google code's generated password stored by svn)
+=Create and install an entity=
 
-    svn import -m "First project" myproject https://appfuse2.googlecode.com/svn/trunk/myproject --username fishribs
-    svn list http://appfuse2.googlecode.com/svn/trunk/  #lists svn repo
-    mv myproject myproject.1  #moves current copy out of the way
-    svn checkout http://appfuse2.googlecode.com/svn/trunk/myproject
-
-4. Run and view the application
-
-   cd into your new project's directory and run mvn
-   run mvn jetty:run-war from your project's directory
-   Browse to http://localhost:8080
-
-
-Create and install an entity
-
-1. Generate an issue entity by running mvn appfuse:gen-model after creating the table.
-
+  # Generate an issue entity by running mvn appfuse:gen-model after creating the table.
+{{{
 create table issue 
  (id bigint not null auto_increment, 
   primary key (id),
@@ -59,34 +67,38 @@ create table issue
   resolution int,
   created datetime
   ) 
-
-2. Generate CRUD using mvn appfuse:gen -Dentity=Issue -DdisableInstallation=true 
-
+}}}
+  # Generate CRUD 
+{{{
+> mvn appfuse:gen -Dentity=Issue -DdisableInstallation=true 
+}}}
+  * Generates IssueAction.java in
+{{{
      /src/main/java/com/door/issuetracker/webapp/action/
-
-     - Generates IssueAction.java
-
+}}}
+  * Adds the entity to hibernate.cfg.xml in
+{{{
      /src/main/resources
-
-     - Adds the entity to hibernate.cfg.xml
-
+}}}
+  * Generates Issue-validation.xml (empty since no constraints)
+{{{
     /src/main/resources/com/door/issuetracker/model
-
-    - Generates Issue-validation.xml (empty since no constraints)
-
+}}}
+  * Not sure about IssueAction-validation.xml
+{{{
     /src/main/resources/com/door/issuetracker/webapp/action
-
-    - Not sure about IssueAction-validation.xml
-
+}}}
+  * Generates issueForm.jsp & issueList.jsp in
+{{{
     /src/main/webapp/WEB-INF/pages
-
-    - Generates issueForm.jsp & issueList.jsp
-
+}}}
+  * Generates test class IssueActionTest.java in
+{{{
     /src/test/java/com/door/issuetracker/webapp/action
- 
-    - Generates test class IssueActionTest.java
+}}}
+   
 
-3. Install the entity with mvn appfuse:install -Dentity=Issue
+  # Install the entity with mvn appfuse:install -Dentity=Issue
 
      /src/main/resources
 
@@ -113,7 +125,7 @@ create table issue
 }}}
 
 =Tutorials=
-
+[http://appfuse.org/display/APF/AppFuse+QuickStart Quick Start]
 [http://appfuse-demos.googlecode.com/svn/trunk Appfuse Demos]
 
 ==Error starting Sun's native2ascii: ==

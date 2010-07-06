@@ -1,4 +1,4 @@
-#Summary Thoughts and ideas around reports and reporting
+#summary Thoughts and ideas around reports and reporting
 
 = Testing Reports =
 

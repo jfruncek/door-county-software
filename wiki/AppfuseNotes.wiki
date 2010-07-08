@@ -2,11 +2,11 @@
 
 Testing to point done on cygwin at `/usr/local/tools` in `c:/cygwin`
 
-  * Java (jdk1.6.0_03 - jdk1.6.0_14 tested)
+* Java (jdk1.6.0_03 - jdk1.6.0_14 tested)
 
 Set environment variables: PATH = %PATH%;%ANT_HOME%/bin;%JAVA_HOME%/bin
 
-  * Database (mysql-5.0.45-win32 and hsqldb tested)
+* Database (mysql-5.0.45-win32 and hsqldb tested)
 
 {{{
 > nohup ./mysqld-nt.exe &   #starts mysql, next change root pwd
@@ -16,9 +16,9 @@ Set environment variables: PATH = %PATH%;%ANT_HOME%/bin;%JAVA_HOME%/bin
 
 hsqldb works via profile choice in pom when running {{{mvn jetty:run-war}}}
 
-  * Maven (maven-2.0.7 and Eclipse embedded tested)
+* Maven (maven-2.0.7 and Eclipse embedded tested)
 
-  * SMTP server (optional) (james-2.3.1 tested)
+* SMTP server (optional) (james-2.3.1 tested)
 
 {{{   
 > nohup ./run.sh &
@@ -26,15 +26,15 @@ hsqldb works via profile choice in pom when running {{{mvn jetty:run-war}}}
 
 =New Project=
 
-  # From ~/dev, run the maven archetype for your chosen stack.
+  * From ~/dev, run the maven archetype for your chosen stack.
 
 {{{
 > mvn archetype:create -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-basic-struts -DremoteRepositories=http://static.appfuse.org/releases -DarchetypeVersion=2.0 -DgroupId=com.door.app -DartifactId=myproject
 }}}
 
-  # Update in the pom.xml the <jdbc.password> property for default mysql db (near bottom of the file) *try postgres next time!*
+  * Update in the pom.xml the <jdbc.password> property for default mysql db (near bottom of the file) *try postgres next time!*
 
-  # Import project into subversion (uses Google code's generated password stored by svn)
+  * Import project into subversion (uses Google code's generated password stored by svn)
 
 {{{
 > svn import -m "First project" myproject https://appfuse2.googlecode.com/svn/trunk/myproject --username fishribs
@@ -43,7 +43,7 @@ hsqldb works via profile choice in pom when running {{{mvn jetty:run-war}}}
 > svn checkout http://appfuse2.googlecode.com/svn/trunk/myproject
 }}}
 
-  # Run and view the application
+  * Run and view the application
 
 {{{
 > cd <new project's directory>
@@ -53,7 +53,7 @@ Browse to http://localhost:8080
 
 =Create and install an entity=
 
-  # Generate an issue entity by running mvn appfuse:gen-model after creating the table.
+  * Generate an issue entity by running mvn appfuse:gen-model after creating the table.
 {{{
 create table issue 
  (id bigint not null auto_increment, 
@@ -68,7 +68,7 @@ create table issue
   created datetime
   ) 
 }}}
-  # Generate CRUD 
+  * Generate CRUD 
 {{{
 > mvn appfuse:gen -Dentity=Issue -DdisableInstallation=true 
 }}}
@@ -97,29 +97,30 @@ create table issue
     /src/test/java/com/door/issuetracker/webapp/action
 }}}
    
+  * Install the entity with mvn appfuse:install -Dentity=Issue
 
-  # Install the entity with mvn appfuse:install -Dentity=Issue
-
+  * Adds page messages (including table headings) to ApplicationResources.properties
+  * Adds action - result mappings to struts.xml
+{{{     
      /src/main/resources
-
-     - Adds page messages (including table headings) to ApplicationResources.properties
-     - Adds action - result mappings to struts.xml
-     
+}}}
+  * Adds main menu item to menu.jsp
+{{{
     /src/main/webapp/common
-
-    - Adds main menu item to menu.jsp
-
+}}}
+  * Adds DAO to applicationContext.xml
+  * Adds menu target page mapping to menu-config.xml
+{{{
     /src/main/webapp/WEB-INF/
-
-    - Adds DAO to applicationContext.xml
-    - Adds menu target page mapping to menu-config.xml
-
+}}}
+  * Adds test data to sample-data.xml
+  * Adds canoo tests to web-tests.xml
+{{{
     /src/test/resources
+}}}
 
-    - Adds test data to sample-data.xml
-    - Adds canoo tests to web-tests.xml
-
-?. tomcat/conf/tomcat-users.xml
+{{{
+ tomcat/conf/tomcat-users.xml
 <user username="jfruncek" password="cedartree01" roles="admin,manager"/>
 
 }}}

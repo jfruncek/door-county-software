@@ -62,8 +62,9 @@ import javax.persistence.*;
 @Entity @Table(name="person")
 public class Person {
     Long id;
-    private String first, last;
-    private int age;
+    String firstName;
+    String lastName;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
@@ -74,6 +75,21 @@ public class Person {
         this.id = id;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
 }}}
   * Generate an issue entity by running mvn appfuse:gen-model after creating the table.
@@ -122,8 +138,8 @@ create table issue
    
   * Install the entity with mvn appfuse:install -Dentity=Issue
 
-  * Adds page messages (including table headings) to ApplicationResources.properties
-  * Adds action - result mappings to struts.xml
+  * Adds page messages (including table headings) to `ApplicationResources.properties`
+  * Adds action - result mappings to `struts.xml`
 {{{     
      /src/main/resources
 }}}

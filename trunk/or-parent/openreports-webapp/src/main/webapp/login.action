@@ -1,0 +1,2 @@
+This file is not actually used, but fakes out the welcome-file-list in web.xml, so that it will
+actually use the login.action as an *.action mapping. 

@@ -52,7 +52,7 @@ Browse to http://localhost:8080
 
 =Create and install an entity=
 
-[http://appfuse.org/display/APF/Maven+Plugins Appfuse uses Maven plugins] for code generation (and a lot else). You can also follow the [http://appfuse.org/display/APF/Tutorials tutorials]. But of course you still need to start with either a POJO model or a database table (below).
+[http://appfuse.org/display/APF/Maven+Plugins Appfuse uses Maven plugins] for code generation (and a lot else). You can also follow the [http://appfuse.org/display/APF/Tutorials tutorials]. But of course you still need to start with either a POJO model or a database table (one or the other of the first two below).
 
   * Create a POJO in the <group.Id>.model package. At minimum you will need something like 
 {{{

@@ -54,6 +54,28 @@ Browse to http://localhost:8080
 
 [http://appfuse.org/display/APF/Maven+Plugins Appfuse uses Maven plugins] for code generation (and a lot else). You can also follow the [http://appfuse.org/display/APF/Tutorials tutorials]. But of course you still need to start with either a POJO model or a database table (below).
 
+  * Create a POJO in the <group.Id>.model package. At minimum you will need something like 
+{{{
+package com.door.app.model;
+
+import javax.persistence.*;
+@Entity @Table(name="person")
+public class Person {
+    Long id;
+    private String first, last;
+    private int age;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+}
+}}}
   * Generate an issue entity by running mvn appfuse:gen-model after creating the table.
 {{{
 create table issue 

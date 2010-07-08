@@ -71,27 +71,27 @@ create table issue
 {{{
 > mvn appfuse:gen -Dentity=Issue -DdisableInstallation=true 
 }}}
-  * Generates IssueAction.java in
+  * Generates `IssueAction.java` in
 {{{
      /src/main/java/com/door/issuetracker/webapp/action/
 }}}
-  * Adds the entity to hibernate.cfg.xml in
+  * Adds the entity to `hibernate.cfg.xml` in
 {{{
      /src/main/resources
 }}}
-  * Generates Issue-validation.xml (empty since no constraints)
+  * Generates `Issue-validation.xml` (empty since no constraints)
 {{{
     /src/main/resources/com/door/issuetracker/model
 }}}
-  * Not sure about IssueAction-validation.xml
+  * Not sure about `IssueAction-validation.xml`
 {{{
     /src/main/resources/com/door/issuetracker/webapp/action
 }}}
-  * Generates issueForm.jsp & issueList.jsp in
+  * Generates `issueForm.jsp` & `issueList.jsp` in
 {{{
     /src/main/webapp/WEB-INF/pages
 }}}
-  * Generates test class IssueActionTest.java in
+  * Generates test class `IssueActionTest.java` in
 {{{
     /src/test/java/com/door/issuetracker/webapp/action
 }}}
@@ -107,13 +107,13 @@ create table issue
 {{{
     /src/main/webapp/common
 }}}
-  * Adds DAO to applicationContext.xml
-  * Adds menu target page mapping to menu-config.xml
+  * Adds DAO to `applicationContext.xml`
+  * Adds menu target page mapping to `menu-config.xml`
 {{{
     /src/main/webapp/WEB-INF/
 }}}
-  * Adds test data to sample-data.xml
-  * Adds canoo tests to web-tests.xml
+  * Adds test data to `sample-data.xml`
+  * Adds canoo tests to `web-tests.xml`
 {{{
     /src/test/resources
 }}}

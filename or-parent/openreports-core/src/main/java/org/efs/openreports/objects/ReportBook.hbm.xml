@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+
+	<class name="org.efs.openreports.objects.ReportBook" table="REPORT_BOOK">
+
+		<id name="id" column="BOOK_ID" type="java.lang.Integer">
+			<generator class="native" />
+		</id>
+
+		<property name="name" column="NAME" not-null="true" unique="true" />
+        
+		<property name="outputPath" column="OUTPUT_PATH" not-null="false"
+			unique="false" />
+            
+        <property name="ctrlUser" column="CTRL_USER_ID" not-null="false"
+            unique="false" />
+
+        <property name="ctrlDate" column="CTRL_DATE" not-null="false"
+            unique="false" />
+
+
+		<list name="groups" table="BOOK_GROUP_MAP">
+			<key column="BOOK_ID" />
+			<index column="MAP_ID" type="java.lang.Integer" />
+			<many-to-many column="GROUP_ID"
+				class="org.efs.openreports.objects.ReportGroup" />
+		</list>
+ 
+        <list name="chapters" cascade="all">
+            <key column="BOOK_ID" />
+            <index column="CHAPTER_INDEX" />
+            <one-to-many class="org.efs.openreports.objects.BookChapter" />
+        </list> 
+
+	</class>
+
+</hibernate-mapping>

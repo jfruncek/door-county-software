@@ -26,17 +26,17 @@ hsqldb works via profile choice in pom when running {{{mvn jetty:run-war}}}
 
 =New Project=
 
-  * From ~/dev, run the maven archetype for your chosen stack (example uses Struts 2, hsqldb via hibernate
+  * From ~/dev, run the maven archetype for your chosen stack (example uses Struts 2 & Hibernate)
 
 {{{
-> mvn archetype:create -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-basic-struts -DremoteRepositories=http://static.appfuse.org/releases -DarchetypeVersion=2.0 -DgroupId=com.door.app -DartifactId=myproject -Phsqldb
+> mvn archetype:create -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-basic-struts -DremoteRepositories=http://static.appfuse.org/releases -DarchetypeVersion=2.0 -DgroupId=com.door.app -DartifactId=myproject 
 }}}
 
-  * Run and view the application
+  * Run and view the application (this example uses HSQL DB)
 
 {{{
 > cd <new project's directory>
-> mvn jetty:run-war
+> mvn jetty:run-war -Phsqldb
 Browse to http://localhost:8080
 }}}
 

@@ -26,21 +26,10 @@ hsqldb works via profile choice in pom when running {{{mvn jetty:run-war}}}
 
 =New Project=
 
-  * From ~/dev, run the maven archetype for your chosen stack.
+  * From ~/dev, run the maven archetype for your chosen stack (example uses Struts 2, hsqldb via hibernate
 
 {{{
-> mvn archetype:create -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-basic-struts -DremoteRepositories=http://static.appfuse.org/releases -DarchetypeVersion=2.0 -DgroupId=com.door.app -DartifactId=myproject
-}}}
-
-  * Update in the pom.xml the <jdbc.password> property for default mysql db (near bottom of the file) *try postgres next time!*
-
-  * Import project into subversion (uses Google code's generated password stored by svn)
-
-{{{
-> svn import -m "First project" myproject https://appfuse2.googlecode.com/svn/trunk/myproject --username fishribs
-> svn list http://appfuse2.googlecode.com/svn/trunk/  #lists svn repo
-> mv myproject myproject.1  #moves current copy out of the way
-> svn checkout http://appfuse2.googlecode.com/svn/trunk/myproject
+> mvn archetype:create -DarchetypeGroupId=org.appfuse.archetypes -DarchetypeArtifactId=appfuse-basic-struts -DremoteRepositories=http://static.appfuse.org/releases -DarchetypeVersion=2.0 -DgroupId=com.door.app -DartifactId=myproject -Phsqldb
 }}}
 
   * Run and view the application
@@ -50,6 +39,16 @@ hsqldb works via profile choice in pom when running {{{mvn jetty:run-war}}}
 > mvn jetty:run-war
 Browse to http://localhost:8080
 }}}
+
+  * (optional) Import project into subversion (uses Google code's generated password stored by svn)
+
+{{{
+> svn import -m "First project" myproject https://appfuse2.googlecode.com/svn/trunk/myproject --username fishribs
+> svn list http://appfuse2.googlecode.com/svn/trunk/  #lists svn repo
+> mv myproject myproject.1  #moves current copy out of the way
+> svn checkout http://appfuse2.googlecode.com/svn/trunk/myproject
+}}}
+
 
 =Create and install an entity=
 

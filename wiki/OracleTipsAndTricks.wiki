@@ -17,3 +17,31 @@ jdbc:oracle:thin:@(description=(address_list=
       (address=(host=mke-racdb-banana-vip)(protocol=tcp)(port=1524))
    (load_balance=yes))(connect_data=(service_name=dev)))
 }}}
+
+= Anonymous block =
+
+{{{
+declare
+
+  country_code VARCHAR2(2);
+  
+begin
+
+  for rec in (select report_date, id, country
+                from riskrpt.risk_sort_data 
+               where report_date=20100630) loop
+
+    select country_cd_iso2 into country_code from starkdb1.countries where country_name = rec.country;
+  
+    update riskrpt.risk_sort_data s
+       set s.country = country_code
+     where s.id = rec.id
+       and s.report_date = rec.report_date;
+       
+    commit;
+  
+  end loop;
+
+end;
+
+}}}

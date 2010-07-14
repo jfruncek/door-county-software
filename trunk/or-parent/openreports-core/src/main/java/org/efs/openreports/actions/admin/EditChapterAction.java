@@ -255,14 +255,18 @@ public class EditChapterAction extends ActionSupport implements SessionAware, Pa
         
     	Map<String, Object> map = new HashMap<String, Object>();
 
-    	for (String parm : parameters.keySet()) {
-        	for (ReportParameterMap rpMap : report.getParameters()) {
-    			String name = rpMap.getReportParameter().getName();
-				if ( name.equals( parm ) || parm.equals( name + ORStatics.LOCK ) ) {
-					String[] values = (String[]) parameters.get(parm);
-					map.put(parm, values[0]);
-    			}
+		for (ReportParameterMap rpMap : report.getParameters()) {
+			String name = rpMap.getReportParameter().getName();
+			if ( parameters.get(name) != null ) {
+				String[] values = (String[]) parameters.get(name);
+				map.put(name, values[0]);
+			} else {
+				map.put(name, new String[] {});
 			}
+			if ( parameters.get(name + ORStatics.LOCK ) != null ) {
+				String[] values = (String[]) parameters.get(name + ORStatics.LOCK);
+				map.put(name + ORStatics.LOCK, values[0]);
+			} 
 		}
 		return map;
 	}

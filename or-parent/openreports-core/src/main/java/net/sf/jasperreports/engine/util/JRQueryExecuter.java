@@ -143,7 +143,7 @@ public class JRQueryExecuter {
                 if( parameterNames != null && parameterNames.size() > 0 ) {
                     JRParameter parameter = null;
                     String parameterName = null;
-                    Class clazz = null;
+                    Class<?> clazz = null;
                     Object parameterValue = null;
                     for( int i = 0; i < parameterNames.size(); i++ ) {
                         parameterName = (String) parameterNames.get( i );
@@ -152,9 +152,10 @@ public class JRQueryExecuter {
                         	throw new JRException( "Parameter '" + parameterName + "' found in query not defined on report." );
                         }
                         
-                        clazz = parameter.getValueClass();
+                        clazz = getBaseType( parameter.getValueClass(), parameterName );
                         // FIXMEparameterValue = jrParameter.getValue();
                         parameterValue = parameterValues.get( parameterName );
+                        parameterValue = getSingleValue( parameterValue, parameterName );
 
                         if( clazz.equals( java.lang.Object.class ) ) {
                             if( parameterValue == null ) {
@@ -250,5 +251,43 @@ public class JRQueryExecuter {
 
         return pstmt;
     }
+    
+    
+    
+    public static Object getSingleValue( Object value, String description ) {
+        
+        if( value == null ) {
+            return null;
+        }
+
+        if( value.getClass().isArray() ) {
+            Object[] array = (Object[]) value;
+            switch( array.length ) {
+            case 0:
+                return null;
+            case 1:
+                return ( array[0] == null ) ? null : array[0].toString();
+            default:
+                throw new IllegalStateException( "more than one (" + array.length + ") value for " + description );
+            }
+        } else {
+            return value;
+        }
+    }
+    
+    public static Class<?> getBaseType( Class<?> clazz, String description ) {
+        
+        if( clazz == null ) {
+            return null;
+        }
+
+        if( clazz.isArray() ) {
+            return clazz.getComponentType();
+        } else {
+            return clazz;
+        }
+    }
+    
+
 
 }

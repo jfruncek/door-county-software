@@ -36,9 +36,11 @@ This section documents actual experience building the site.
 || 1h || investigate wrapper plugin - it does iframe but how to place it? ||
 || 30m || [http://extensions.joomla.org/extensions/site-management/seo-a-metadata/2796 Used this Joomla ext.] [https://www.google.com/webmasters/tools to verify the site] ||
 || 1hr || Add the pictures - one on "What to expect" ||
+|| 2hr || Add the intake form - Health History attachment on "What to expect" ||
+|| 2hr || Research Boatman & Gleeson sites' design & style ||
+|| 1hr || Prepare portrait and new treatment room pic and place on site ||
 || _todo_ || Check back for updates on Deb’s site on Google webmaster tools ||
 || _todo_ || other things in http://www.wikihow.com/Get-Your-Website-to-Show-up-on-the-Search-Engines ||
-|| 2hr || Add the intake form - Health History attachment on "What to expect" ||
 || _todo_ || Finish the content (including the bio) ||
 || _todo_ || Amp up the style ||
 

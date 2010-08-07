@@ -25,7 +25,7 @@ This section documents actual experience building the site.
 || 1h || Debug installation ||
 || 1h || Research domain naming/web hosting ||
 || 1h || Create content outline ||
-|| 1h || Meet with Deb for signup / content sharing ||
+|| 1h || Meet with Deb for signup / content sharing [https://www.siteground.com/customer_login.htm Siteground login] ||
 || 2h || Initial Joomla install, tutorials and remove sample data  ||
 || 2h || Read Beginner's guide, install template, re-org. content ||
 || 2h || Add content; debug links ||

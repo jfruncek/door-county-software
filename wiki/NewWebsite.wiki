@@ -40,7 +40,7 @@ This section documents actual experience building the site.
 || 2hr || Research Boatman & Gleeson sites' design & style ||
 || 1hr || Prepare portrait and new treatment room pic and place on site ||
 || 4hr || Redo the content (Deb provided updates including the bio.) ||
-|| 6hr || Amp up the style by modifying the Lotus template.css and images ||
+|| 8hr || Amp up the style by modifying the Lotus template.css and images ||
 || _todo_ || Check back for updates on Deb’s site on Google webmaster tools ||
 || _todo_ || other things in http://www.wikihow.com/Get-Your-Website-to-Show-up-on-the-Search-Engines ||
 

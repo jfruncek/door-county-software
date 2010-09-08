@@ -39,8 +39,9 @@ This section documents actual experience building the site.
 || 2hr || Add the intake form - Health History attachment on "What to expect" ||
 || 2hr || Research Boatman & Gleeson sites' design & style ||
 || 1hr || Prepare portrait and new treatment room pic and place on site ||
-|| 4hr || Redo the content (Deb provided updates including the bio.) ||
-|| 8hr || Amp up the style by modifying the Lotus template.css and images ||
+|| 6hr || Redo the content (Deb provided updates including the bio.) ||
+|| 12hr || Amp up the style by modifying the Lotus template.css and images ||
+|| 30 min || Partial backups to home folder thru File Manager/Backup Wizard ||
 || _todo_ || Check back for updates on Deb’s site on Google webmaster tools ||
 || _todo_ || other things in http://www.wikihow.com/Get-Your-Website-to-Show-up-on-the-Search-Engines ||
 

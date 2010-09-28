@@ -14,3 +14,9 @@
   </tr>
 </s:iterator>
 }}}
+
+==Add to Google calendar==
+
+{{{
+javascript:%20AddToCalendar('google',%20'https://www.eventbrite.com',%20'580571505',%20'');
+}}}

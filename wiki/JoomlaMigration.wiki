@@ -1,15 +1,17 @@
 #summary Migration of umcwfb.org to Joomla
 
-= The Migration Process
+=The Migration Process=
 
 The Web Ministry team will work closely with the staff, ministry leaders, and others to define a website migration strategy. The migration process includes the following steps:
 
 ==Develop a Migration Plan==
-The Web Ministry team will meet with staff and ministry leaders to discuss website needs and to develop a migration plan. The plan will include identifying content to be deleted, updated, or added before it is converted to Joomla; defining any custom content types; creating any new content; developing a project timeline; defining any custom work flows; identifying individuals to be involved in the transition; clarifying the roles and responsibilities of those individuals; and identifying and delivering needed training.
+The Web Ministry team will meet with staff and ministry leaders to discuss website needs and to develop a migration plan. The plan will include identifying content to be deleted, updated, or added before it is converted to Joomla; defining any custom content types; creating any new content; developing a project timeline; identifying individuals to be involved in the transition; clarifying the roles and responsibilities of those individuals; and identifying and delivering needed training.
 
 ==Create the new Joomla site==
 The new site will be created by the individuals identified in the migration plan. These individuals can include members of the Web ministry team, staff, and/or ministry leaders.
 
-==Provide user training for the site's support staff==
-Training will be provided in the form of workshops or individual training sessions. Ongoing support will be available from the CMS Team, but the day-to-day updates of the converted sites will be the responsibility of the site owners.
+==Provide user training for the site's support==
+Training will be provided in the form of workshops or individual training sessions. Ongoing support will be available from the Web Ministry team, but the day-to-day updates of the converted sites will be the responsibility of the staff or ministry leaders or their designees.
+
+==Follow-up==
 Conduct a post-migration assessment to evaluate the migration process and obtain client feedback.

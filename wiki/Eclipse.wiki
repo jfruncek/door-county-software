@@ -11,6 +11,6 @@ C:\apps\eclipse-3.6.1\eclipse.exe -showlocation -vmargs -Xmx1024m
 
 = Desired Plugins =
 
-  * http://eclipse-tools.sourceforge.net/implementors/
+  * Implementors http://eclipse-tools.sourceforge.net/updates/
   * http://www.hibernate.org/subprojects/tools.html
   * Web Standard Tools (WST)

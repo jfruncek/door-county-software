@@ -1,0 +1,16 @@
+#summary Configure Eclipse
+
+= Windows =
+
+  # Download Eclipse 3.6.1, unzip and create shortcut (below)
+  # Install Subclipse 1.6.x (Eclipse 3.2+) - http://subclipse.tigris.org/update_1.6.x
+
+{{{
+C:\apps\eclipse-3.6.1\eclipse.exe -showlocation -vmargs -Xmx1024m
+}}}
+
+= Desired Plugins =
+
+  * http://eclipse-tools.sourceforge.net/implementors/
+  * http://www.hibernate.org/subprojects/tools.html
+  * Web Standard Tools (WST)

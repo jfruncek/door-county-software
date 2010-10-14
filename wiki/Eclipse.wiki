@@ -14,3 +14,7 @@ C:\apps\eclipse-3.6.1\eclipse.exe -showlocation -vmargs -Xmx1024m
   * Implementors http://eclipse-tools.sourceforge.net/updates/
   * Hinernate (JBoss Tools) http://download.jboss.org/jbosstools/updates/JBossTools-3.1.1.GA/ http://www.hibernate.org/subprojects/tools.html
   * Web Standard Tools (WST) - doesn't seem to be named this in Helios
+
+= Tips =
+
+* Always show the Error Log view and check it and the Problems view frequently

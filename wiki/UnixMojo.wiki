@@ -14,6 +14,13 @@ Copy source, removing the '.svn' directories.
 dont know that I ever made this work
 }}}
 
+Find an open port / lookup associated PID
+
+{{{
+netstat -o
+ps -ef (cygwin: ps -eWf)
+}}}
+
 Remove the .svn directories
 
 {{{

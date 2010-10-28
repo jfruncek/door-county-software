@@ -8,6 +8,11 @@ The quick brown fox jumped over the lazy dog.
 ^D
 }}}
 
+Create a symbolic link. For example, to create a link to ant in /usr/local/bin:
+{{{
+$ ln -s apache-ant-1.8.1/bin/ant ant
+}}}
+
 Copy source, removing the '.svn' directories.
 
 {{{

@@ -2,7 +2,10 @@
 
 = Directory shortcuts =
 
-Add symbolic links to the home directory to allow quick cd's to most used places and starting most used scripts.
+Add symbolic links to the home directory to allow quick cd's to most used places and starting most used scripts. Examples:
+
+  * ln -ds /cygdrive/c/evercore/trunk evercore
+  * ln -ds /usr/local/tools/jboss/bin jboss
 
 = Perl =
 

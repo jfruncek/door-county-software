@@ -5,19 +5,31 @@ import java.util.List;
 
 public class PrimeFactors {
 
-    static List<Integer> factors = new ArrayList<Integer>();
+    List<Integer> factors = new ArrayList<Integer>();
     
-	public static List<Integer> generate(int i) {
+	public List<Integer> generate(int n) {
 	    factors.add(1);
-	    if ( isPrime(i) ) {
-	        factors.add(i);
+	    if ( n % 2 == 0 ) {
+            factors.add(2);
+        }
+	    for ( int i = 3; i <= n / 2; i++) {
+	        System.out.println("trying: " + i);
+	        System.out.println("n % i = " + (n % i));
+	        if ( n % i == 0 && isPrime(i) ) {
+	            factors.add(i);
+	        }
 	    }
 		return factors;
 	}
 
-    private static boolean isPrime(int i) {
-        if ( i == 2 ) { return true; };
-        return false;
+    private static boolean isPrime(int n) {
+        if ( n == 1 || n == 2 ) { return true; };
+        for ( int i = 3; i < n / 2; i++) {
+            if ( n % i == 0 ) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

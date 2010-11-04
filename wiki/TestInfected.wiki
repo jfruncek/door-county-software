@@ -1,0 +1,9 @@
+#summary Experiences with learning to write test-driven code
+
+= Uncle bob's Prime Factors =
+
+Code in Door Sandbox. Lessons learned:
+  * Dropped back to `sysout` when tests failed, which wasn't terrible, but could more tests have been written on smaller methods instead?
+  * Need to add more robust test data set
+  * Also need to refactor
+  * Instance of `PrimeFactors` was easier to test than static class

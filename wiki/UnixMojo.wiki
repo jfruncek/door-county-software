@@ -1,4 +1,4 @@
-#summary Various *nix shell commands that I've used
+#summary Various *nix shell (generally Bash) commands that I've used
 
 Create a multiline file
 
@@ -11,6 +11,12 @@ The quick brown fox jumped over the lazy dog.
 Create a symbolic link. For example, to create a link to ant in /usr/local/bin:
 {{{
 $ ln -s apache-ant-1.8.1/bin/ant ant
+}}}
+
+Create an environment variable; use it in subsequent programs
+{{{
+myvar='A value that wont be expanded'
+export myvar
 }}}
 
 Copy source, removing the '.svn' directories.

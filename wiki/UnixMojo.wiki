@@ -32,6 +32,12 @@ netstat -o
 ps -ef (cygwin: ps -eWf)
 }}}
 
+List all users
+
+{{{
+cat /etc/passwd |grep "/home" |cut -d: -f1
+}}}
+
 Remove the .svn directories
 
 {{{

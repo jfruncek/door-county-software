@@ -10,14 +10,24 @@ import junit.framework.TestCase;
 public class FactoryTest extends TestCase {
 
     public void testSimpleFactory() {
-        assertTrue ("Creates a sicilian style pizza", SimpleFactory.createPizza(PizzaType.SICILIAN) instanceof SicilianPizza);
-        assertTrue ("Creates a New York style pizza", SimpleFactory.createPizza(PizzaType.NEW_YORK) instanceof NewYorkPizza);
-        assertTrue ("Creates a Chicago style pizza", SimpleFactory.createPizza(PizzaType.CHICAGO) instanceof ChicagoPizza);
+        assertTrue("Creates a sicilian style pizza",
+                   SimpleFactory.createPizza(Pizza.type.SICILIAN) instanceof SicilianPizza);
+        assertTrue("Creates a New York style pizza",
+                   SimpleFactory.createPizza(Pizza.type.NEW_YORK) instanceof NewYorkPizza);
+        assertTrue("Creates a Chicago style pizza",
+                   SimpleFactory.createPizza(Pizza.type.CHICAGO) instanceof ChicagoPizza);
     }
-    
-    public void testAbstractFactory() {
-//TODO        assertTrue ("Creates a sicilian style pizza", PizzaFactory.create(PizzaType.SICILIAN) instanceof SicilianPizza);
-//        assertTrue ("Creates a New York style pizza", PizzaFactory.create(PizzaType.NEW_YORK) instanceof NewYorkPizza);
-//        assertTrue ("Creates a Chicago style pizza", PizzaFactory.create(PizzaType.CHICAGO) instanceof ChicagoPizza);
+
+    public void testFactoryMethod() {
+        Pizza pizza;
+        assertTrue("Creates a sicilian style pizza",
+                   (pizza = new SicilianPizzaFactory().order()) instanceof SicilianPizza);
+        assertEquals("Sicilian pizza has thin crust", pizza.getCrust().getThickness(), "thin");
+        assertTrue("Creates a New York style pizza",
+                   (pizza = new NewYorkPizzaFactory().order()) instanceof NewYorkPizza);
+        assertEquals("New York pizza has regular crust", pizza.getCrust().getThickness(), "regular");
+        assertTrue("Creates a Chicago style pizza",
+                   (pizza = new ChicagoPizzaFactory().order()) instanceof ChicagoPizza);
+        assertEquals("Chicago pizza has thick crust", pizza.getCrust().getThickness(), "thick");
     }
 }

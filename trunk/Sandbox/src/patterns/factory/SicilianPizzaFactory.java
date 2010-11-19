@@ -1,10 +1,11 @@
 package patterns.factory;
 
-public class SicilianPizzaFactory {
+public class SicilianPizzaFactory extends PizzaFactory {
 
-    public static SicilianPizza create(PizzaType sicilian) {
-        // TODO Does this take a type parameter?
-        return null;
+    @Override
+    public Pizza createPizza() {
+        Pizza pizza = new SicilianPizza();
+        return pizza;
     }
 
 }

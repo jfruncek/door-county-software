@@ -1,5 +1,9 @@
 package patterns.factory;
 
-public class SicilianPizza implements Pizza {
+public class SicilianPizza extends Pizza {
 
+    public SicilianPizza() {
+        crust = new Crust("thin");        
+    }
+    
 }

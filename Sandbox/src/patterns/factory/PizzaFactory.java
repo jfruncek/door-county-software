@@ -1,24 +1,19 @@
 package patterns.factory;
 
 /**
- * Demonstrates a more extensible abstract pizza factory.
+ * Demonstrates an extensible Pizza factory that is only dependent on the Pizza interface. It has a factory method that
+ * each concrete factor must implement.
  * 
  * @author jfruncek
- *
+ * 
  */
 public abstract class PizzaFactory {
 
-    protected Crust crust;
-    protected Sauce sauce;
-    
-    public Pizza createPizza(PizzaType type) {
-        
-        // TODO: here we create a factory, but based upon type? doesn't that mean our factory changes as much as the simple does?
-        createCrust();
-        createSauce();
-        
-        return null; // TODO: return Pizza here
+    public Pizza order() {
+        Pizza pizza;
+        pizza = createPizza();
+        return pizza;
     }
-    public abstract void createCrust();
-    public abstract void createSauce();
+    
+    public abstract Pizza createPizza();
 }

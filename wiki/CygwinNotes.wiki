@@ -1,4 +1,11 @@
-#Things to configure and tips for Cygwin
+#summary Things to configure and tips for Cygwin
+
+= Set Cygwin `/` =
+
+This worked before but doesn't seem to now
+{{{
+mount "c:\" /
+}}}
 
 = Directory shortcuts =
 

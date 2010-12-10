@@ -1,0 +1,29 @@
+#summary Notes about using JUnit from Ant
+
+= Configuration =
+
+Taken from [http://www.manning-source.com/books/hatcher/hatcher_ch04.pdf Java Development with Ant]
+
+
+{{{
+    <target name="test" description="Run junit tests for ${module.name}">
+        <delete dir="${module.test.output}"/>
+        <mkdir dir="${module.test.output}"/>
+        <junit printsummary="withOutAndErr" errorProperty="test.failed" failureProperty="test.failed">
+            <classpath>
+                <path refid="module.classpath"/>
+                <pathelement location="${module.test.classes}"/>
+            </classpath>
+            <formatter type="plain" usefile="false"/>
+            <test name="${testcase}" todir="${module.test.output}" if="testcase"/>
+            <batchtest todir="${module.test.output}" unless="testcase">
+                <fileset dir="${module.test.classes}">
+                    <include name="**/Test*.class"/>
+                    <include name="**/*Test.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+        
+        <fail message="Tests failed. Check log and/or reports." if="test.failed"/>
+    </target>
+}}}

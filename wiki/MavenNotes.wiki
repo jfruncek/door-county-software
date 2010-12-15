@@ -66,4 +66,9 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
 || {{{ mvn deploy:deploy-file -DgroupId=com.actuate -DartifactId=espreadsheet -Dversion=9.1 -Dpackaging=pom -Dfile=../com.actuate/pom.xml -DrepositoryId=mke-sisp-01.starkinvestments.com-releases -Durl=http://mke-sisp-01:5080/artifactory/third-party }}} || Deploy a resource to a local repo || ||
 
 = Gotchas =
-[http://www.mail-archive.com/users@maven.apache.org/msg106643.html Mysterious missing JMS jar] - Run `maven install` from the command line and it will show you how to download and install manually the missing jars.
+[http://www.mail-archive.com/users@maven.apache.org/msg106643.html Mysterious missing JMS jar] - Run `maven install` from the command line and it will show you how to download and install manually the missing jars. The commands you will need are
+{{{
+$ mvn install:install-file -DgroupId=javax.jms -DartifactId=jms -Dversion=1.1 -Dpackaging=jar -Dfile=jms.jar
+$ mvn install:install-file -DgroupId=com.sun.jdmk -DartifactId=jmxtools -Dversion=1.2.1 -Dpackaging=jar -Dfile=jmxtools.jar
+$ mvn install:install-file -DgroupId=com.sun.jmx -DartifactId=jmxri -Dversion=1.2.1 -Dpackaging=jar -Dfile=jmxri.jar
+}}}

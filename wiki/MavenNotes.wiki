@@ -64,3 +64,6 @@ Maven's Super POM carries with it all the default conventions that Maven encoura
 ||{{{mvn dependency:tree}}}|| displays dependencies in a tree || ||
 ||{{{mvn dependency:tree -Dverbose -Dincludes=commons-collections}}}||limits scope of above|| ||
 || {{{ mvn deploy:deploy-file -DgroupId=com.actuate -DartifactId=espreadsheet -Dversion=9.1 -Dpackaging=pom -Dfile=../com.actuate/pom.xml -DrepositoryId=mke-sisp-01.starkinvestments.com-releases -Durl=http://mke-sisp-01:5080/artifactory/third-party }}} || Deploy a resource to a local repo || ||
+
+= Gotchas =
+[http://www.mail-archive.com/users@maven.apache.org/msg106643.html Mysterious missing JMS jar]

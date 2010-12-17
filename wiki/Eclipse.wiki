@@ -18,3 +18,4 @@ C:\apps\eclipse-3.6.1\eclipse.exe -showlocation -vmargs -Xmx1024m
 = Tips =
 
   * Always show the Error Log view and check it and the Problems view frequently
+  * When using `log4j`, tell it `-Dlog4j.debug` to find out how it is trying to configure itself

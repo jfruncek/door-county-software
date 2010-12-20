@@ -14,7 +14,6 @@ public abstract class Pizza {
     }
     
     Crust crust;
-    Sauce sauce;
     Set<Topping> toppings = new HashSet<Topping>();;
     
     public void addTopping(Topping item) {
@@ -25,7 +24,4 @@ public abstract class Pizza {
         return crust;
     }
 
-    public Sauce getSauce() {
-        return sauce;
-    }
 }

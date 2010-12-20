@@ -30,4 +30,10 @@ public class FactoryTest extends TestCase {
                    (pizza = new ChicagoPizzaFactory().order()) instanceof ChicagoPizza);
         assertEquals("Chicago pizza has thick crust", pizza.getCrust().getThickness(), "thick");
     }
+    
+    public void testIngredientFactory() {
+        assertTrue("Sicilian style pizza has a thin crust", new SicilianIngredientFactory().makeCrust() instanceof ThinCrust);
+        assertTrue("New York style pizza has a thin crust", new NewYorkIngredientFactory().makeCrust() instanceof ThinCrust);
+        assertTrue("Chicago style pizza has a thick crust", new ChicagoIngredientFactory().makeCrust() instanceof ThickCrust);
+    }
 }

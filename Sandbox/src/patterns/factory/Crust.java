@@ -4,7 +4,7 @@ public class Crust {
 
     private String thickness;
 
-    public Crust(String name) {
+    Crust(String name) {
         this.thickness = name;
     }
     

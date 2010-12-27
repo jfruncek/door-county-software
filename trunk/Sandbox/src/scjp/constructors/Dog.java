@@ -7,7 +7,7 @@ public class Dog extends Animal {
 
 	Dog() 
 	{
-		super(Dog.MUTT); //try removing this line!
+		super(Dog.MUTT); //try removing this line or the argument!
 	}
 	
 	Dog(String name) 

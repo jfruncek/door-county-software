@@ -8,7 +8,6 @@ public class PrimeFactors {
     List<Integer> factors = new ArrayList<Integer>();
     
 	public List<Integer> generate(int n) {
-	    factors.add(1);
 	    if ( n % 2 == 0 ) {
             factors.add(2);
         }

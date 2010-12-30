@@ -1,0 +1,11 @@
+# Simple tests
+10 2 5
+2 2
+50 5 5 2
+55 11 5
+
+# Boundary & Error
+# see test case - throws illegal argument exception for negative numbers and 0
+
+# Performance
+# TODO - use JUnitPerf

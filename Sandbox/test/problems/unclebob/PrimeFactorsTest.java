@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -15,12 +16,23 @@ public class PrimeFactorsTest extends TestCase {
     // Right - BICEP
     // Boundary - Inverse - Cross-check - Error conditions - Performance within bounds?
 
+    public void testOneHasNoPrimeFactors() {
+        List<Integer> factors = new PrimeFactors().generate(1);
+        assertEquals("generates an empty list of prime factors for 1", Collections.EMPTY_LIST, factors);
+    }
+    
 	public void testGeneratesFactorsOf2() {
 		List<Integer> factors = new PrimeFactors().generate(2);
         assertEquals("generates how many prime factors?", 1, factors.size());
         assertTrue("generates a prime factor, 2", factors.contains(2));
 	}
 	
+	public void testGeneratesFactorsOf3() {
+        List<Integer> factors = new PrimeFactors().generate(3);
+        assertEquals("generates how many prime factors?", 1, factors.size());
+        assertTrue("generates a prime factor, 3", factors.contains(3));
+    }
+    
 	public void testGeneratesFactorsOf10() {
         List<Integer> factors = new PrimeFactors().generate(10);
         System.out.println("Factors computed: " + factors);

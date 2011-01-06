@@ -8,16 +8,9 @@ public class PrimeFactors {
     List<Integer> factors = new ArrayList<Integer>();
     
 	public List<Integer> generate(int n) {
-	    if ( n % 2 == 0 ) {
-            factors.add(2);
+	    if ( n > 1 ) {
+            factors.add(n);
         }
-	    for ( int i = 3; i <= n / 2; i++) {
-	        System.out.println("trying: " + i);
-	        System.out.println("n % i = " + (n % i));
-	        if ( n % i == 0 && isPrime(i) ) {
-	            factors.add(i);
-	        }
-	    }
 		return factors;
 	}
 

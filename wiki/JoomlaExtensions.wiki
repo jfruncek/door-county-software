@@ -1,4 +1,5 @@
 #summary Notes on 3rd-party Joomla extensions
 
-[http://extensions.joomla.org/extensions/migration-a-conversion/joomla-migration/11658 jupgrade]
+[http://extensions.joomla.org/extensions/migration-a-conversion/joomla-migration/11658 jUpgrade]
 
+[http://www.akeebabackup.com/ Akeeba]

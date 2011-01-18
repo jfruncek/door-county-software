@@ -42,3 +42,16 @@ moved installation folder to /tmp (or delete it)
 {{{
 error_reporting = E_ALL & ~E_NOTICE
 }}}
+
+  * Opening some directories to write for all (should really determine what Joomla is running as and add this user to a group with write permissions)
+
+{{{
+/opt/lampp/htdocs/joomla15/components
+/opt/lampp/htdocs/joomla15/language
+/opt/lampp/htdocs/joomla15/media
+/opt/lampp/htdocs/joomla15/plugins
+/opt/lampp/htdocs/joomla15/plugins/system
+/opt/lampp/htdocs/joomla15/tmp
+/opt/lampp/htdocs/joomla15/administrator/component
+/opt/lampp/htdocs/joomla15/administrator/modules
+}}}

@@ -10,7 +10,13 @@ Following Quick Start at http://www.joomla.org/download.html .
 tar xvfz xampp-linux-1.7.3a.tar.gz -C /opt
 }}}
 
-  * Start xampp - (use mysqladmin shutdown first if mysql is already running)
+  * Must use `mysql` provided with xampp, so first
+
+{{{
+mysql shutdown
+}}}
+
+  * Start xampp 
 
 {{{
 /opt/lampp/lampp start
@@ -32,9 +38,15 @@ root@frubuntu:/opt/lampp/htdocs/joomla15/ # unzip -l /home/john/Destop/Joomla_1.
   * Finish Joomla install http://localhost/joomla15 
 
 {{{
-use root as mysql user (no pwd) (need to secure later)
 created joomla15/configuration.php from default in textbox
 moved installation folder to /tmp (or delete it)
+}}}
+
+= Usage =
+
+  * Use the correct `mysql`
+{{{
+root@frubuntu:/opt/lampp/bin/mysql (need to secure later)
 }}}
 
   * Hitting Admin or default page gives lots of "Strict.." errors. The following line in etc/php.ini does the trick (restart of lampp needed)

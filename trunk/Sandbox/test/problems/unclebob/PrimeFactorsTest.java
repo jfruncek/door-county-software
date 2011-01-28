@@ -11,9 +11,15 @@ import java.util.StringTokenizer;
 
 import junit.framework.TestCase;
 
+/*
+ * See http://katas.softwarecraftsmanship.org/?p=139
+ */
 public class PrimeFactorsTest extends TestCase {
     
-    // Right - BICEP
+    private static final String GENERATES_A_PRIME_FACTOR = " generates a prime factor, ";
+    private static final String GENERATES_HOW_MANY_PRIME_FACTORS = "Generates how many prime factors?";
+
+        // Right - BICEP
     // Boundary - Inverse - Cross-check - Error conditions - Performance within bounds?
 
     public void testOneHasNoPrimeFactors() {
@@ -23,24 +29,34 @@ public class PrimeFactorsTest extends TestCase {
     
 	public void testGeneratesFactorsOf2() {
 		List<Integer> factors = new PrimeFactors().generate(2);
-        assertEquals("generates how many prime factors?", 1, factors.size());
-        assertTrue("generates a prime factor, 2", factors.contains(2));
+        assertEquals(GENERATES_HOW_MANY_PRIME_FACTORS, 1, factors.size());
+        assertTrue(GENERATES_A_PRIME_FACTOR + 2, factors.contains(2));
 	}
 	
-	public void testGeneratesFactorsOf3() {
+    public void testGeneratesFactorsOf3() {
         List<Integer> factors = new PrimeFactors().generate(3);
-        assertEquals("generates how many prime factors?", 1, factors.size());
-        assertTrue("generates a prime factor, 3", factors.contains(3));
+        assertEquals(GENERATES_HOW_MANY_PRIME_FACTORS, 1, factors.size());
+        assertTrue(GENERATES_A_PRIME_FACTOR + 3, factors.contains(3));
     }
     
-	public void testGeneratesFactorsOf10() {
-        List<Integer> factors = new PrimeFactors().generate(10);
-        System.out.println("Factors computed: " + factors);
-        assertEquals("generates how many prime factors?", 2, factors.size());
-        assertTrue("generates a prime factor, 2", factors.contains(2));
-        assertTrue("generates a prime factor, 5", factors.contains(5));
+    public void testGeneratesFactorsOf4() {
+        List<Integer> factors = new PrimeFactors().generate(4);
+        assertEquals(GENERATES_HOW_MANY_PRIME_FACTORS, 2, factors.size());
+        assertEquals("generates 2 prime factors: 2", 2, countOf(2, factors));
     }
- 
+    
+    /**
+     * @param f a number
+     * @return count of appearances of the number in a list
+     */
+    private int countOf(int f, List<Integer> list) {
+        int count = 0;
+        for (Integer integer : list) {
+            if (integer == f) count++;
+        }
+        return count;
+    }
+    
 	public void testFromFile() throws IOException {
 	    String line;
 	    
@@ -48,7 +64,7 @@ public class PrimeFactorsTest extends TestCase {
 	    BufferedReader br = new BufferedReader(new FileReader("prime_factors_tests.txt"));
 	    
 	    while ( (line = br.readLine()) != null ) {
-	        System.out.println("Line:" + line);
+	        //System.out.println("Line:" + line);
 	        if (line.startsWith("#")) { //comment line
 	            continue;
 	        }
@@ -67,12 +83,12 @@ public class PrimeFactorsTest extends TestCase {
 	        
 	        List<Integer> factors = new PrimeFactors().generate(n);
 	        
-	        assertEquals("generates correct number of prime factors", expectedFactors.size(), factors.size());
+	        assertEquals("For " + n + GENERATES_HOW_MANY_PRIME_FACTORS, expectedFactors.size(), factors.size());
 	        
 	        Iterator<Integer> iter = expectedFactors.iterator();
 	        while ( iter.hasNext() ) {
 	            int i = iter.next();
-	            assertTrue("generates a prime factor, " + i, factors.contains(i));
+	            assertTrue("For " + n + GENERATES_A_PRIME_FACTOR + i, factors.contains(i));
 	        }
 	    }
 	    if ( n == null ) {

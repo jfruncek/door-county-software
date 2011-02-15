@@ -7,3 +7,7 @@ Code in Door Sandbox. Lessons learned:
   * Need to add more robust test data set? Reading tests from a simple text file is a good idea!
   * Also need to refactor
   * Instance of `PrimeFactors` was easier to test than static class
+
+= Venkat's thread safe multi-valued map =
+
+  * Wow, using the `Lock` interface makes it worlds easier to test

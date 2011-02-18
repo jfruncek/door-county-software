@@ -1,6 +1,11 @@
-#summary Installation procedure on Ubuntu 8.04
+#summary Joomla Knowledge Base
 
-= Installation =
+= How To's =
+
+http://kb.siteground.com/article/How_to_move_Joomla_to_another_directory.html
+
+
+=  Installation procedure on Ubuntu 8.04 =
 
 Following Quick Start at http://www.joomla.org/download.html .
 

@@ -1,0 +1,35 @@
+<html t:type="layout" title="Vote app"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<t:zone t:id="listZone" elementName="div">
+		<ul>
+			<t:loop source="items" value="item">
+				<li>
+				<t:actionlink t:id="vote" context="item">+</t:actionlink>
+				${item.votes}
+				<a href="${item.url}">${item.title}</a>
+				</li>
+			</t:loop>
+		</ul>
+	</t:zone>
+
+    <t:beaneditform t:id="form" object="newItem"></t:beaneditform> 
+
+    <p:sidebar>
+
+        <p>
+            Just to prove this is live:
+        </p>
+
+        <p>The current time is: ${currentTime}.</p>
+
+
+        <p>
+            [<t:pagelink page="Index">refresh</t:pagelink>]
+        </p>
+    </p:sidebar>
+
+</html>

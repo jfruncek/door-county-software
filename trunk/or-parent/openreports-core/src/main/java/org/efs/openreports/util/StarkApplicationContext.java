@@ -162,6 +162,14 @@ public class StarkApplicationContext implements ApplicationContext {
     public StarkApplicationContext( ApplicationContext applicationContext ) {
         this.applicationContext = applicationContext;
     }
+
+    public Object getBean(String paramString, Object[] paramArrayOfObject) throws BeansException {
+        return this.applicationContext.getBean(paramString, paramArrayOfObject);
+    }
+
+    public String getId() {
+        return this.applicationContext.getId();
+    }
     
     
 

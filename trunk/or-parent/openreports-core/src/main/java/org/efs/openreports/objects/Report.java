@@ -29,7 +29,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
-import org.efs.openreports.engine.javareport.JavaReportEngine;
 import org.efs.openreports.util.CtrlDataObject;
 
 public class Report implements CtrlDataObject, Comparable<Report>, Serializable
@@ -39,10 +38,6 @@ public class Report implements CtrlDataObject, Comparable<Report>, Serializable
 	public static final Pattern REPORT_PROCESSOR_PATTERN = Pattern.compile( "^--report-processor=(\\S+)\\s*$", Pattern.MULTILINE );
 
 	public static final Pattern REPORT_POST_PROCESSOR_PATTERN = Pattern.compile( "^--report-postprocessor=(.*)$", Pattern.MULTILINE );
-	public static final Pattern JAVA_REPORT_CLASS_PATTERN =
-            Pattern.compile( "^" + JavaReportEngine.PROPERTY_REPORT_BUILDER_CLASS.replace( ".", "\\." ) + "=(.*)$",
-                    Pattern.MULTILINE );
-	
 
 	private Integer id;
 	
@@ -118,7 +113,7 @@ public class Report implements CtrlDataObject, Comparable<Report>, Serializable
      * @return
      */
 	public boolean isBuildParametersListImplemented() {
-	    return isBirtReport() || isESpreadsheetReport() || isJasperReport() || isJavaReport();
+	    return isBirtReport() || isESpreadsheetReport() || isJasperReport();
 	}
 	
 	public boolean isQueryReport() {
@@ -126,7 +121,7 @@ public class Report implements CtrlDataObject, Comparable<Report>, Serializable
             return false;
         }
         if( isJXLSReport() || isJFreeReport() || isVelocityReport() || isReportProcessorReport() ||
-                isESpreadsheetReport() || isJavaReport() ) {
+                isESpreadsheetReport() ) {
             return false;
         }
         return true;
@@ -158,14 +153,6 @@ public class Report implements CtrlDataObject, Comparable<Report>, Serializable
         Matcher m = REPORT_PROCESSOR_PATTERN.matcher(query);
         return m.find();
     }
-    
-    public boolean isJavaReport()
-    {
-        if (!hasQueryText()) return false;
-        Matcher m = JAVA_REPORT_CLASS_PATTERN.matcher(query);
-        return m.find();
-    }
-    
 
     public boolean hasReportPostProcessor() {
         return getReportPostProcessorDef() != null;

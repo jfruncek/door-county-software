@@ -16,3 +16,5 @@
 
  * Removed JFree, Mondrian, BIRT, eSpreadsheet, Stark custom
  * Must mvn install Oracle driver locally
+ * Added a `ReportPostProcessor` interface (no impl)
+ * Need to decide about `StarkApplicationContext`

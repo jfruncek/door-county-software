@@ -11,3 +11,8 @@
      * Verify totals against a check query or among reports
      * Correct "as of" date for parameter, fund description, report title
      * For some reports they don't like it if there's more than one page
+
+= Mavenized Open Reports =
+
+ * Removed JFree, Mondranian, BIRT, eSpreadsheet, Stark custom
+ * Must mvn install Oracle driver locally

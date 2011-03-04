@@ -14,8 +14,6 @@ import org.efs.openreports.providers.DirectoryProvider;
 import org.efs.openreports.providers.ProviderException;
 import org.jfree.util.Log;
 
-import com.starkinvestments.rpt.common.ReportPostProcessor;
-
 /**
  * Executes report post-processing. It is sometimes necessary to perform some additional processing
  * not easily done within the report engine flavor. For example, setting the report headings in

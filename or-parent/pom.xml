@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.starkinvestments</groupId>
+    <groupId>com.door</groupId>
     <artifactId>openreports-parent</artifactId>
     <packaging>pom</packaging>
     <name>openreports-parent</name>
@@ -11,8 +11,8 @@
         <module>openreports-core</module>
         <module>openreports-webapp</module>
     </modules>
-    <description>Top-level project for Stark Open Reports fork of http://sourceforge.net/projects/oreports/</description>
-    <url>http://www.starkinvestments.com/</url>
+    <description>Top-level project for Door County Software fork of http://sourceforge.net/projects/oreports/</description>
+    <url>http://code.google.com/p/door-county-software/</url>
     <build>
         <plugins>
             <plugin>
@@ -36,24 +36,20 @@
             <repository> <id>sourceforge.net</id> <name>jXLS snapshot repository</name>
             <url>http://jxls.sourceforge.net/repository/snapshots</url> </repository>
         -->
-        <repository>
+        <!--<repository>
+           <id>jboss.org</id>
+           <name>JBoss Nexus</name>
+           <url>
+              https://repository.jboss.org/nexus/
+           </url>
+        </repository>
+        --><repository>
             <id>ibiblio.org</id>
             <name>Apache Server</name>
             <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
         </repository>
     </repositories>
     <dependencies>
-        <dependency>
-            <groupId>com.actuate</groupId>
-            <artifactId>espreadsheet</artifactId>
-            <version>9.1</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>commons-collections</groupId>
-            <artifactId>commons-collections</artifactId>
-            <version>[3.2,]</version>
-        </dependency>
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
@@ -78,7 +74,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
+            <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
             <version>2.0</version>
             <scope>provided</scope>
@@ -100,41 +96,20 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>jfree</groupId>
-            <artifactId>jfreechart</artifactId>
-            <version>1.0.13</version>
-        </dependency>
-        <dependency>
-            <groupId>jfreereport</groupId>
-            <artifactId>jfreereport</artifactId>
-            <version>0.8.7-5</version>
-        </dependency>
-        <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.15</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>mondrian.xmla</groupId>
-            <artifactId>mondrian</artifactId>
-            <version>3.0</version>
-        </dependency>
-        <dependency>
             <groupId>net.sf.jxls</groupId>
             <artifactId>jxls-core</artifactId>
-            <version>0.9.9-SNAPSHOT</version>
+            <version>0.9.9</version>
         </dependency>
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
             <version>1.8.0</version>
-        </dependency>
-        <dependency>
-            <groupId>oracle</groupId>
-            <artifactId>ojdbc</artifactId>
-            <version>6</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -161,25 +136,19 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.apache.xmlbeans</groupId>
-            <artifactId>xmlbeans</artifactId>
-            <version>2.3.0-no-w3c</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
-            <version>2.0.9</version>
-        </dependency>
+            <version>2.2.1</version>
+        </dependency><!--
         <dependency>
-            <groupId>org.apache.xbean</groupId>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>2.8</version>
+            <version>3.0.5.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.birt</groupId>
-            <artifactId>org.eclipse.birt</artifactId>
-            <version>2.3.1</version>
-            <type>pom</type>
+        --><dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>2.5.6</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -199,28 +168,44 @@
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
-            <version>1.6.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.thoughtworks.xstream</groupId>
-            <artifactId>xstream</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>jfree</groupId>
-            <artifactId>jcommon-xml</artifactId>
-            <version>1.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>com.starkinvestments</groupId>
-            <artifactId>rptcommon</artifactId>
-            <version>1.b</version>
+            <version>1.7</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+        	<groupId>commons-codec</groupId>
+        	<artifactId>commons-codec</artifactId>
+        	<version>1.4</version>
+        	<type>jar</type>
+        	<scope>compile</scope>
+        </dependency>
+        <dependency>
+        	<groupId>com.oracle</groupId>
+        	<artifactId>ojdbc6</artifactId>
+        	<version>11.2.0.1</version>
+        </dependency>
+        <dependency>
+        	<groupId>commons-cli</groupId>
+        	<artifactId>commons-cli</artifactId>
+        	<version>1.2</version>
+        	<type>jar</type>
+        	<scope>compile</scope>
+        </dependency>
+        <dependency>
+        	<groupId>org.apache.xbean</groupId>
+        	<artifactId>xbean-spring</artifactId>
+        	<version>3.2</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.thoughtworks.xstream</groupId>
+        	<artifactId>xstream</artifactId>
+        	<version>1.3.1</version>
+        	<type>jar</type>
+        	<scope>compile</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>

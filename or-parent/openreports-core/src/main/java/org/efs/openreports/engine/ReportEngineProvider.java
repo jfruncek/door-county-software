@@ -31,12 +31,6 @@ public class ReportEngineProvider implements ApplicationContextAware {
     public ReportEngine getReportEngine( Report report ) throws ProviderException {
         if( report.isChartReport() ) {
             return getEngine( CHART_REPORT_ENGINE );
-        } else if( report.isJXLSReport() ) {
-            return getEngine( "jxlsReportEngine" );
-        } else if( report.isJFreeReport() ) {
-            return getEngine( "jfreeReportEngine" );
-        } else if( report.isBirtReport() ) {
-            return getEngine( "birtReportEngine" );
         } else if( report.isJasperReport() ) {
             return getEngine( JASPER_REPORT_ENGINE );
         } else if( report.isReportProcessorReport() ) {
@@ -45,11 +39,7 @@ public class ReportEngineProvider implements ApplicationContextAware {
             return getEngine( "queryReportEngine" );
         } else if( report.isVelocityReport() ) {
             return getEngine( "velocityReportEngine" );
-        } else if( report.isESpreadsheetReport() ) {
-            return getEngine( "eSpreadsheetReportEngine" );
-        } else if( report.isJavaReport() ) {
-            return getEngine( "javaReportEngine" );
-        }
+        } 
 
         String message = report.getName() + " is invalid. Please verify report definition.";
         log.error( message );

@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.starkinvestments</groupId>
+    <groupId>com.door</groupId>
     <artifactId>openreports-webapp</artifactId>
     <name>openreports-webapp</name>
-    <description>Project for Stark Open Reports web application (war)</description>
+    <description>Project for fork of Open Reports web application (war)</description>
     <packaging>war</packaging>
     <version>3.1.0</version>
-    <url>http://www.starkinvestments.com/</url>
+    <url>http://code.google.com/p/door-county-software/</url>
     <build>
         <plugins>
             <plugin>
@@ -19,18 +19,18 @@
 					<target>6</target>
 				</configuration>
 			</plugin>
-			<plugin>
+<!-- 		<plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <warName>openreports</warName>
                     <webResources>
                         <resource>
-                          <!-- this is relative to the pom.xml directory -->
+                          comment this is relative to the pom.xml directory 
                           <directory>external-resource</directory>
                         </resource>
                       </webResources>
                 </configuration>
-            </plugin>
+            </plugin>  -->
         </plugins>
     </build>
 </project>

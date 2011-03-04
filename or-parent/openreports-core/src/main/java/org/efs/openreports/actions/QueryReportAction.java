@@ -26,7 +26,6 @@ import org.apache.struts2.interceptor.SessionAware;
 import org.efs.openreports.ORStatics;
 import org.efs.openreports.actions.admin.ActionHelper;
 import org.efs.openreports.actions.admin.SessionHelper;
-import org.efs.openreports.engine.JFreeReportEngine;
 import org.efs.openreports.engine.QueryReportEngine;
 import org.efs.openreports.engine.input.ReportEngineInput;
 import org.efs.openreports.engine.output.QueryEngineOutput;
@@ -81,27 +80,15 @@ public class QueryReportAction extends ActionSupport implements SessionAware, Ap
             Map<String, Object> reportParameters = getReportParameterMap( user );
             ReportEngineInput input = new ReportEngineInput( report, reportParameters );
 
-            if( report.isJFreeReport() ) {
-                JFreeReportEngine jfreeReportEngine =
-                        starkAppContext.getSpringBean( "jfreeReportEngine", JFreeReportEngine.class );
-                ReportEngineOutput engineOutput = null;
-                try {
-                    engineOutput = jfreeReportEngine.generateReport( input );
-                    html = new String( engineOutput.getContentAsBytes() );
-                } finally {
-                    ReleasableU.I.safeRelease( engineOutput );
-                }
-            } else {
-                QueryEngineOutput engineOutput = null;
-                try {
-                    QueryReportEngine queryReportEngine =
-                            starkAppContext.getSpringBean( "queryReportEngine", QueryReportEngine.class );
-                    QueryEngineOutput output = queryReportEngine.generateReport( input );
-                    session.put( ORStatics.QUERY_REPORT_RESULTS, output.getResults() );
-                    session.put( ORStatics.QUERY_REPORT_PROPERTIES, output.getProperties() );
-                } finally {
-                    ReleasableU.I.safeRelease( engineOutput );
-                }
+            QueryEngineOutput engineOutput = null;
+            try {
+                QueryReportEngine queryReportEngine =
+                        starkAppContext.getSpringBean( "queryReportEngine", QueryReportEngine.class );
+                QueryEngineOutput output = queryReportEngine.generateReport( input );
+                session.put( ORStatics.QUERY_REPORT_RESULTS, output.getResults() );
+                session.put( ORStatics.QUERY_REPORT_PROPERTIES, output.getProperties() );
+            } finally {
+                ReleasableU.I.safeRelease( engineOutput );
             }
 
             reportLogSupport.logSuccess( reportLog );
@@ -112,9 +99,6 @@ public class QueryReportAction extends ActionSupport implements SessionAware, Ap
             reportLogSupport.safeLogFailure( reportLog, e.getMessage(), log );
             return ERROR;
         }
-
-        if( report.isJFreeReport() )
-            return ORStatics.JFREEREPORT_RESULT;
 
         return SUCCESS;
     }

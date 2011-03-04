@@ -14,5 +14,5 @@
 
 = Mavenized Open Reports =
 
- * Removed JFree, Mondranian, BIRT, eSpreadsheet, Stark custom
+ * Removed JFree, Mondrian, BIRT, eSpreadsheet, Stark custom
  * Must mvn install Oracle driver locally

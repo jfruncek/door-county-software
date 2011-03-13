@@ -4,14 +4,14 @@
 
 ||*Veggie*||*Variety*||*Season*||*Amount*||*Area*||*Harvest*||
 || spinach || || Early || || || Early |
-|| beets || || || || || ||
+|| beets || Early Wonder Tall Top || || || || ||
 || beans  || || || || || ||
 || mustard greens || || || || || ||
 || collard greens || || || || || ||
 || onions || || || || || ||
 || carrots || || || || || ||
 || tomatoes || || || || || ||
-|| okra || || || || || ||
+|| okra || Millionaire (F1) || || || || ||
 || turnips? || || || || || ||
 
 

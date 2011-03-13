@@ -1,8 +1,21 @@
 #summary Plans and notes about extended season gardening, hydroponics & aquaponics
 
-= Cold Frames =
+= Church Garden =
 
-Check library for plans before purchasing a book
+||*Veggie*||*Variety*||*Season*||*Amount*||*Area*||*Harvest*||
+|| spinach || || Early || || || Early |
+|| beets || || || || || ||
+|| beans  || || || || || ||
+|| mustard greens || || || || || ||
+|| collard greens || || || || || ||
+|| onions || || || || || ||
+|| carrots || || || || || ||
+|| tomatoes || || || || || ||
+|| okra || || || || || ||
+|| turnips? || || || || || ||
+
+
+= Cold Frames =
 
   * Location: the back circle is sunny, protected and close to the building
   * Height: 2 ft (!), higher in back for slant
@@ -14,7 +27,3 @@ Check library for plans before purchasing a book
   * Heat mat below seedlings in soil
   * Lights kept VERY near plants
  
-= Church Garden =
-
-  * tomatoes, beans, mustard greens, zuchini
-  * collard greens, beans, turnips, eggplant, cilantro, beets and mustard

@@ -2,14 +2,14 @@
 
 = Church Garden =
 
-||*Veggie*||*Variety*||*Season*||*Amount*||*Area*||*Harvest*||
+||*Veggie*||*Variety*||*Season*||*Culture*||*Area*||*Harvest*||
 || spinach || || Early || || || Early |
-|| beets || Early Wonder Tall Top || || || || ||
-|| beans  || || || || || ||
-|| mustard greens || || || || || ||
-|| collard greens || || || || || ||
+|| beets || Early Wonder Tall Top || Early || || || ||
+|| beans  || Provider (round) || Early || || || ||
+|| mustard greens || Green Wave || "Slow bolt"|| || || ||
+|| collard greens || Champion || Early (cole) || In a 2-4" wide band sow 60 seeds/ft. || ||  60 d or clip 4- to 5-wk-old leaves. ||
 || onions || || || || || ||
-|| carrots || || || || || ||
+|| carrots || Napoli (F1) pelleted || || || || ||
 || tomatoes || || || || || ||
 || okra || Millionaire (F1) || || || || ||
 || turnips? || || || || || ||

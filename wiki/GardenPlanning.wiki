@@ -3,7 +3,7 @@
 = Church Garden =
 
 ||*Veggie*||*Variety*||*Season*||*Culture*||*Area*||*Harvest*||
-|| spinach || || Early || || || 
+|| spinach || [http://www.johnnyseeds.com/p-6664-spargo-f1.aspx Spargo]|| Early || || || 
 || beets || Early Wonder Tall Top || Early || || || ||
 || beans  || Provider (round) || Early || || || ||
 || mustard greens || Green Wave || "Slow bolt"|| || || ||

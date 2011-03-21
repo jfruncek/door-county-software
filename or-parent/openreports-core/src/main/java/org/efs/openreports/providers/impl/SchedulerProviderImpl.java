@@ -36,10 +36,6 @@ import org.quartz.SimpleTrigger;
 import org.quartz.Trigger;
 
 public class SchedulerProviderImpl implements SchedulerProvider {
-    private static final String STARK_OPEN_REPORTS = "Stark Open Reports";
-
-    private static final String RUN_STATUS_MONITOR = "Run Status Monitor";
-
     protected static Logger log = Logger.getLogger( SchedulerProviderImpl.class.getName() );
 
     private Scheduler scheduler;

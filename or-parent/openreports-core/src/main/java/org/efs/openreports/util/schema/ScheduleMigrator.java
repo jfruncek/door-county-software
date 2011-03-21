@@ -34,12 +34,9 @@ import org.apache.log4j.Logger;
 import org.apache.xbean.spring.context.FileSystemXmlApplicationContext;
 import org.efs.openreports.objects.BookChapter;
 import org.efs.openreports.objects.ReportBook;
-import org.efs.openreports.objects.ReportDeliveryLog;
-import org.efs.openreports.objects.ReportLog;
 import org.efs.openreports.objects.ReportSchedule;
 import org.efs.openreports.providers.BookProvider;
 import org.efs.openreports.providers.ProviderException;
-import org.efs.openreports.providers.ReportLogProvider;
 import org.efs.openreports.providers.SchedulerProvider;
 
 public class ScheduleMigrator {

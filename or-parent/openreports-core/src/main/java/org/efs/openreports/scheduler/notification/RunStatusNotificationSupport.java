@@ -133,8 +133,7 @@ public class RunStatusNotificationSupport {
     private List<RunStatus> sort( Collection<RunStatus> children ) {
         ArrayList<RunStatus> sortingChildren = new ArrayList<RunStatus>(children);
         Collections.sort( sortingChildren, new Comparator<RunStatus>() {
-           @Override
-            public int compare( RunStatus o1, RunStatus o2 ) {
+           public int compare( RunStatus o1, RunStatus o2 ) {
                return o1.getRefererenceKey().compareTo( o2.getRefererenceKey() );
             } 
         });

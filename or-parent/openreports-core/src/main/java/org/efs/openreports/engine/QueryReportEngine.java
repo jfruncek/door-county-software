@@ -128,7 +128,6 @@ public class QueryReportEngine extends ReportEngine implements ApplicationContex
         }
     }
 
-    @Override
     public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException {
         this.applicationContext = new StarkApplicationContext( applicationContext );
     }
@@ -214,7 +213,6 @@ public class QueryReportEngine extends ReportEngine implements ApplicationContex
         JRDesignQuery query = new JRDesignQuery();
         query.setText( queryText );
 
-        @SuppressWarnings( "unchecked" )
         // convert parameters to JRDesignParameters so they can be parsed
         Map jrParameters = ORUtil.buildJRDesignParameters( parameters );
 

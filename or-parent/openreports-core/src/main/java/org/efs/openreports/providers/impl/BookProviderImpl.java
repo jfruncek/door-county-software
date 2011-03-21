@@ -24,32 +24,27 @@ public class BookProviderImpl implements BookProvider {
 		log.info("BookProviderImpl created");
 	}
 
-	@Override
 	public ReportBook getReportBook(Integer id) throws ProviderException {
 		return (ReportBook) hibernateProvider.load(ReportBook.class, id);
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<ReportBook> getReportBooks() throws ProviderException {
 		String fromClause = "from org.efs.openreports.objects.ReportBook reportBook order by reportBook.name ";
 
 		return (List<ReportBook>) hibernateProvider.query(fromClause);
 	}
 
-	@Override
 	public ReportBook insertReportBook(ReportBook reportBook, String updateUser)
 			throws ProviderException {
 		return (ReportBook) hibernateProvider.saveCtrlDataObject(reportBook, updateUser);
 	}
 
-	@Override
 	public void updateReportBook(ReportBook reportBook, String updateUser)
 			throws ProviderException {
 		hibernateProvider.updateCtrlDataObject(reportBook, updateUser);
 	}
 
-	@Override
 	public void deleteReportBook(ReportBook reportBook)
 			throws ProviderException {
 		try {
@@ -60,7 +55,6 @@ public class BookProviderImpl implements BookProvider {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<ReportBook> getBooksForGroup(ReportGroup group)
 			throws ProviderException {
 		try {

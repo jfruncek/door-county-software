@@ -23,12 +23,10 @@ public class DynaBeanPagenatedList implements PaginatedList {
         this.sortOrder = sortOrder;
     }
 
-    @Override
     public int getFullListSize() {
         return queryResults.getCount();
     }
 
-    @Override
     public List<DynaBean> getList() {
         int startOffset = getStartOffset();
         int endOffsetNonInclusive = getEndOffsetNonInclusive( startOffset );
@@ -36,28 +34,23 @@ public class DynaBeanPagenatedList implements PaginatedList {
         return queryResults.getResultsAsDynaBeans( startOffset, endOffsetNonInclusive, sortCriterion, ascending );
     }
 
-    @Override
     public int getObjectsPerPage() {
         return objectsPerPage;
     }
 
-    @Override
     public int getPageNumber() {
         return pageNumber;
     }
 
-    @Override
     public String getSearchId() {
         // not currently necessary
         return "42";
     }
 
-    @Override
     public String getSortCriterion() {
         return sortCriterion;
     }
 
-    @Override
     public SortOrderEnum getSortDirection() {
         return sortOrder;
     }

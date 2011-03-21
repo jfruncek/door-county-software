@@ -24,7 +24,7 @@ import java.util.*;
  * 
  *
  * @see ParameterAware
- * @author Rickard �berg (rickard@middleware-company.com)
+ * @author Rickard ...berg (rickard@middleware-company.com)
  */
 public class SingleValueMap implements Map<String,Object>, Serializable
 {  
@@ -78,7 +78,7 @@ public class SingleValueMap implements Map<String,Object>, Serializable
       return val == null ? null : val[0];
    }
 
-   @SuppressWarnings("unchecked")
+   @SuppressWarnings("rawtypes")
    public void putAll(Map map)
    {
       throw new UnsupportedOperationException();

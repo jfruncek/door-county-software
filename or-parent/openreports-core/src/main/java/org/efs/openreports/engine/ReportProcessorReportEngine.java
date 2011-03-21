@@ -146,7 +146,6 @@ public class ReportProcessorReportEngine extends ReportEngine implements Applica
         return output;
     }
 
-    @Override
     public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException {
         this.appContext = new StarkApplicationContext( applicationContext );
     }

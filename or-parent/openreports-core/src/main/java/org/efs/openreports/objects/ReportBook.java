@@ -137,22 +137,18 @@ public class ReportBook implements Comparable<ReportBook>, CtrlDataObject, Seria
 		throw new IllegalArgumentException("No chapter with id=" + id + " exist on book: " + name);
 	}
 
-	@Override
 	public Date getCtrlDate() {
 	    return ctrlDate;
 	}
 
-	@Override
 	public String getCtrlUser() {
 	    return ctrlUser;
 	}
 
-	@Override
 	public void setCtrlDate(Date modifyDate) {
 		this.ctrlDate = modifyDate;
 	}
 
-	@Override
 	public void setCtrlUser(String user) {
 		this.ctrlUser = user;
 	}

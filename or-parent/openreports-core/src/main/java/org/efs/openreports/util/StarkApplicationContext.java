@@ -60,7 +60,7 @@ public class StarkApplicationContext implements ApplicationContext {
         return applicationContext.getAutowireCapableBeanFactory();
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public Object getBean( String arg0, Class arg1 ) throws BeansException {
         return applicationContext.getBean( arg0, arg1 );
     }
@@ -77,22 +77,22 @@ public class StarkApplicationContext implements ApplicationContext {
         return applicationContext.getBeanDefinitionNames();
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public String[] getBeanNamesForType( Class arg0, boolean arg1, boolean arg2 ) {
         return applicationContext.getBeanNamesForType( arg0, arg1, arg2 );
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public String[] getBeanNamesForType( Class arg0 ) {
         return applicationContext.getBeanNamesForType( arg0 );
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public Map getBeansOfType( Class arg0, boolean arg1, boolean arg2 ) throws BeansException {
         return applicationContext.getBeansOfType( arg0, arg1, arg2 );
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public Map getBeansOfType( Class arg0 ) throws BeansException {
         return applicationContext.getBeansOfType( arg0 );
     }
@@ -137,7 +137,7 @@ public class StarkApplicationContext implements ApplicationContext {
         return applicationContext.getStartupDate();
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public Class getType( String arg0 ) throws NoSuchBeanDefinitionException {
         return applicationContext.getType( arg0 );
     }
@@ -150,7 +150,7 @@ public class StarkApplicationContext implements ApplicationContext {
         return applicationContext.isSingleton( arg0 );
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public boolean isTypeMatch( String arg0, Class arg1 ) throws NoSuchBeanDefinitionException {
         return applicationContext.isTypeMatch( arg0, arg1 );
     }

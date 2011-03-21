@@ -63,27 +63,22 @@ public class TestRunStatusNotificationSupport extends TestCase {
     static class MockMailProvider implements MailProvider {
         List<MailMessage> sentMessages = new ArrayList<MailMessage>();
 
-        @Override
         public void sendMail( MailMessage mail ) throws ProviderException {
             sentMessages.add( mail );
         }
 
-        @Override
         public void setMailHost( String mailHost ) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
         public void setPassword( String password ) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
         public void setUseMailAuthenticator( boolean useMailAuthenticator ) {
             throw new UnsupportedOperationException();
         }
 
-        @Override
         public void setUserName( String userName ) {
             throw new UnsupportedOperationException();
         }
@@ -98,7 +93,6 @@ public class TestRunStatusNotificationSupport extends TestCase {
             put( makeORProperty( ORProperty.MAIL_REPLY_TO, "it-reporting@starkinvestments.com" ) );
         }
 
-        @Override
         public ORProperty getProperty( String key ) throws ProviderException {
 
             ORProperty prop = values.get( key );
@@ -107,7 +101,6 @@ public class TestRunStatusNotificationSupport extends TestCase {
             throw new UnsupportedOperationException( "getProperty for key " + key );
         }
 
-        @Override
         public void setProperty( String key, String value ) throws ProviderException {
             throw new UnsupportedOperationException( "getProperty for key " + key );
         }

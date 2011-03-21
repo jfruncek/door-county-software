@@ -52,7 +52,6 @@ public class ReportEngineProvider implements ApplicationContextAware {
         return reportEngine;
     }
 
-    @Override
     public void setApplicationContext( ApplicationContext appContext ) throws BeansException {
         this.appContext = new StarkApplicationContext( appContext );
     }

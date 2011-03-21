@@ -29,7 +29,6 @@ import org.efs.openreports.actions.admin.SessionHelper;
 import org.efs.openreports.engine.QueryReportEngine;
 import org.efs.openreports.engine.input.ReportEngineInput;
 import org.efs.openreports.engine.output.QueryEngineOutput;
-import org.efs.openreports.engine.output.ReportEngineOutput;
 import org.efs.openreports.objects.Report;
 import org.efs.openreports.objects.ReportLog;
 import org.efs.openreports.objects.ReportParameterMap;
@@ -111,7 +110,6 @@ public class QueryReportAction extends ActionSupport implements SessionAware, Ap
         return report;
     }
 
-    @Override
     public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException {
         starkAppContext = new StarkApplicationContext( applicationContext );
     }

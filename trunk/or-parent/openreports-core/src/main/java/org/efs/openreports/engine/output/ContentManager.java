@@ -34,7 +34,6 @@ public class ContentManager extends OutputStream implements Releasable {
      * To be called when done with the ContentStreamManager. The primary reason is to free up the
      * temporary overflow file, if necessary.
      */
-    @Override
     public void release() {
         log.info( "in ContentManager.release, for " + makeIdName() );
         IoU.I.safeDelete( overflowFile, "ContentManager" );

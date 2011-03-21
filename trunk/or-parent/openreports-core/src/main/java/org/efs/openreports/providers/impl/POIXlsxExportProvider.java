@@ -52,7 +52,6 @@ public class POIXlsxExportProvider implements XlsxExportProvider {
 
     private DirectoryProvider directoryProvider;
 
-    @Override
     public void export( Iterator<DynaBean> data, DisplayProperty[] properties, OutputStream output, String exportId )
             throws ProviderException {
 

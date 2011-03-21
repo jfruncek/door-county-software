@@ -330,7 +330,6 @@ public class EditReportParameterMapAction extends ActionSupport implements Sessi
     }
 
     @SuppressWarnings("unchecked")
-    @Override
     public void setSession( Map session ) {
         this.session = session;
         

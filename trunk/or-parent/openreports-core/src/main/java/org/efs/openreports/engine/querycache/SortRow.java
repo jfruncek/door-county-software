@@ -71,7 +71,6 @@ class SortRow {
      */
     protected static class SortRowComparator implements Comparator<SortRow> {
 
-        @Override
         public int compare( SortRow sh1, SortRow sh2 ) {
             if( sh1 == null ) {
                 return ( sh2 == null ) ? 0 : -1;

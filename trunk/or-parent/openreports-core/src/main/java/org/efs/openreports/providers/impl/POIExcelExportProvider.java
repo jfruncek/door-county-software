@@ -20,8 +20,6 @@ import org.efs.openreports.util.DisplayProperty;
 
 public class POIExcelExportProvider implements ExcelExportProvider {
 
-	@SuppressWarnings({ "unchecked" })
-	@Override
 	public void export(Iterator<DynaBean> data, DisplayProperty[] properties, OutputStream output, String exportId) throws ProviderException {
 		
 		HSSFWorkbook wb = new HSSFWorkbook();

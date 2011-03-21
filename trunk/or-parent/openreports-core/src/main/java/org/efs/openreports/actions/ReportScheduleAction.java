@@ -903,7 +903,6 @@ public class ReportScheduleAction extends ActionSupport {
             return ClassUtils.getShortClassName( value, "-" );
         }
 
-        @Override
         public int compareTo( ScriptVariable that ) {
             int result =  this.source.compareTo( that.source );
             if (result != 0)  return result;

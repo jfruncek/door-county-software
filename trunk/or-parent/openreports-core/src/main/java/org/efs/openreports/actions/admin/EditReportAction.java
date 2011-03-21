@@ -567,8 +567,7 @@ public class EditReportAction extends ActionSupport implements SessionAware {
 
 			String name = query.substring(beginIndex + 3, endIndex);
 			
-	        @SuppressWarnings("unused")
-			ReportParameter queryParameter;
+	        ReportParameter queryParameter;
 			try {
 				queryParameter = parameterProvider.getReportParameter(name);
 		        if (queryParameter == null) {

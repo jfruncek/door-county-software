@@ -39,10 +39,12 @@ import com.thoughtworks.xstream.XStream;
 
 public class DataExportAction extends ActionSupport  
 {	
-	private boolean submitOk;	
+    private static final long serialVersionUID = 6833848552450378735L;
+
+    private boolean submitOk;	
 	
 	private String fileName;
-	private List reports;
+	private List<Report> reports;
 	private int[] reportIds;
 	
 	private ReportProvider reportProvider;
@@ -98,7 +100,7 @@ public class DataExportAction extends ActionSupport
 		if (submitOk != null) this.submitOk = true;
 	}	
 	
-	public List getReports()
+	public List<Report> getReports()
 	{
 		return reports;
 	}	

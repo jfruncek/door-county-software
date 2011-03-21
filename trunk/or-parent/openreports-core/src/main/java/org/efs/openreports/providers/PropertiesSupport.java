@@ -15,12 +15,10 @@ public class PropertiesSupport implements PropertiesProvider {
         this.provider = provider;
     }
     
-    @Override
     public ORProperty getProperty( String key ) throws ProviderException {
         return provider.getProperty( key );
     }
     
-    @Override
     public void setProperty( String key, String value ) throws ProviderException {
         provider.setProperty( key, value );
     }

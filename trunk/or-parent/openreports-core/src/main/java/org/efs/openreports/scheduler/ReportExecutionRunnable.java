@@ -55,7 +55,6 @@ public class ReportExecutionRunnable implements Runnable, ApplicationContextAwar
     public ReportExecutionRunnable( ) {
     }
 
-    @Override
     public void run() {
         ReportUser user = reportSchedule.getUser();
         Report report = reportSchedule.getReport();
@@ -145,7 +144,6 @@ public class ReportExecutionRunnable implements Runnable, ApplicationContextAwar
         this.alertProvider = alertProvider;
     }
 
-    @Override
     public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException {
         this.appContext = new StarkApplicationContext( applicationContext );
     }

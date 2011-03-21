@@ -356,7 +356,6 @@ public class RunBookAction extends ActionSupport implements ParameterAware  {
 		/**
 		 * Sort dates to the top, then by parameter order
 		 */
-		@Override
 		public int compare(ReportParameterMap map1, ReportParameterMap map2) {
 			if (isDateParameter(map1)) {
 				if (isDateParameter(map2)) {
@@ -382,7 +381,6 @@ public class RunBookAction extends ActionSupport implements ParameterAware  {
 		/** 
 		 * Sort by report name, then by parameter order
 		 */
-		@Override
 		public int compare(ReportParameterMap map1, ReportParameterMap map2) {
 			int compare = map1.getReport().getName().compareTo(map2.getReport().getName());
 			

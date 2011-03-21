@@ -50,7 +50,6 @@ public class BatchReportProcessor implements ReportProcessor, ApplicationContext
     private DeliverySupport deliverySupport;
     private BlockingThreadPoolTaskExecutor reportExecutor;
 
-    @Override
     public void handleResults( QueryResults queryResults, ReportEngineInput reportInput ) {
         LOG.info( "BatchReportProcessor.handleResults for report: " + reportInput.getReport().getName() );
         RunStatusAcquisition runStatusAcquisition = acquireRunStatus( reportInput );
@@ -74,7 +73,6 @@ public class BatchReportProcessor implements ReportProcessor, ApplicationContext
         LOG.info( "leaving BatchReportProcessor.handleResults for report: " + reportInput.getReport().getName() );
     }
 
-    @Override
     public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException {
         this.appContext = new StarkApplicationContext( applicationContext );
     }

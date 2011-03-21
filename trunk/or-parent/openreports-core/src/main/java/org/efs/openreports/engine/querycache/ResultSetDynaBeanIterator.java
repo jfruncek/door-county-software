@@ -29,7 +29,6 @@ public class ResultSetDynaBeanIterator implements Iterator<DynaBean> {
         this.resultSet = resultSet;
     }
 
-    @Override
     public boolean hasNext() {
         if( currentRow != null ) {
             return true;
@@ -38,7 +37,6 @@ public class ResultSetDynaBeanIterator implements Iterator<DynaBean> {
         return currentRow != null;
     }
 
-    @Override
     public DynaBean next() {
         if( !hasNext() ) {
             throw new NoSuchElementException( "no more rows" );
@@ -49,7 +47,6 @@ public class ResultSetDynaBeanIterator implements Iterator<DynaBean> {
         }
     }
 
-    @Override
     public void remove() {
         throw new UnsupportedOperationException( "can't remove from this thing" );
     }

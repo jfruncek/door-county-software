@@ -85,7 +85,6 @@ public class ScheduledReportJob implements Job, ApplicationContextAware {
     }
 
 
-    @Override
     public void setApplicationContext( ApplicationContext applicationContext ) throws BeansException {
         this.appContext = new StarkApplicationContext( applicationContext );
     }

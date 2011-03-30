@@ -12,7 +12,7 @@ Failures: 5
 Incomplete: 1
    TestBook1: Test Book Desc 1: 
       TestBatch2: Test Batch 2 Desc: 
-         TestReport4: Test Report 4 Desc: null
+         TestReport4: Test Report 4 Desc: 
 
 
 

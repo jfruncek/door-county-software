@@ -10,8 +10,8 @@ Set environment variables: PATH = %PATH%;%ANT_HOME%/bin;%JAVA_HOME%/bin
 
 {{{
 > nohup ./mysqld-nt.exe &   #starts mysql, next change root pwd
-> ./mysql.exe --user=root --pass='' mysql -e "update user set password=password('cedartree01') where user='root'; flush privileges;"
-> ./mysql.exe --user=root --pass='cedartree01'   #creates a client window for sql
+> ./mysql.exe --user=root --pass='' mysql -e "update user set password=password('') where user='root'; flush privileges;"
+> ./mysql.exe --user=root --pass=''   #creates a client window for sql
 }}}
 
 hsqldb works via profile choice in pom when running {{{mvn jetty:run-war}}}
@@ -160,7 +160,7 @@ create table issue
 
 {{{
  tomcat/conf/tomcat-users.xml
-<user username="jfruncek" password="cedartree01" roles="admin,manager"/>
+<user username="jfruncek" password="" roles="admin,manager"/>
 
 }}}
 

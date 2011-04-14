@@ -14,7 +14,7 @@
 
 = Mavenized Open Reports =
 
- * Removed JFree, Mondrian, BIRT, eSpreadsheet, Stark custom
+ * Removed JFree (including Chart reports), Mondrian (including JPivot & WCF), BIRT, eSpreadsheet, Stark custom
  * Must mvn install Oracle driver locally: `mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.1 -Dpackaging=jar -Dfile=ojdbc6.jar`
  * Added a `ReportPostProcessor` interface (no impl)
  * Need to decide about `StarkApplicationContext`

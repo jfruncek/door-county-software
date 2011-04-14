@@ -82,26 +82,6 @@ public class ReportOptionsAction extends ActionSupport implements SessionAware
 		{
 			return ORStatics.QUERY_REPORT_ACTION;
 		}
-        else if (report.isChartReport() && !submitSchedule)
-		{
-			return ORStatics.CHART_REPORT_ACTION;
-		}	
-        else if (report.isJPivotReport() && !submitSchedule)
-        {  
-        	ORUtil.resetOlapContext(ActionContext.getContext());  
-        	   
-        	try
-        	{
-        		ReportLog reportLog = new ReportLog(user, report, new Date());           
-        		reportLogProvider.insertReportLog(reportLog);
-        	}
-        	catch(ProviderException pe)
-        	{
-        		log.warn(pe);
-        	}            
-                     
-            return ORStatics.JPIVOT_ACTION;
-        }   
 		
 		/*
 		 * if report is displayed inline, export type already selected and

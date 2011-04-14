@@ -9,6 +9,7 @@
     <version>3.1.0</version>
     <url>http://code.google.com/p/door-county-software/</url>
     <build>
+        <finalName>openreports</finalName>
         <plugins>
             <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -19,7 +20,8 @@
 					<target>6</target>
 				</configuration>
 			</plugin>
-<!-- 		<plugin>
+            
+     		<plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <warName>openreports</warName>
@@ -30,7 +32,7 @@
                         </resource>
                       </webResources>
                 </configuration>
-            </plugin>  -->
+            </plugin> 
         </plugins>
     </build>
 </project>

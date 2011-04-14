@@ -145,26 +145,8 @@ public class ExecuteReportAction extends ActionSupport implements SessionAware, 
 			session.put(ORStatics.REPORT_PARAMETERS, map);		
 			
 			if (report.isQueryReport()) return ORStatics.QUERY_REPORT_ACTION;
-			if (report.isChartReport()) return ORStatics.CHART_REPORT_ACTION;
 			if (report.isJXLSReport()) return ORStatics.JXLSREPORT_ACTION;
             
-            if (report.isJPivotReport())
-            {
-                ORUtil.resetOlapContext(ActionContext.getContext());
-
-                try 
-                {
-                    ReportLog reportLog = new ReportLog(user, report, new Date());
-                    reportLogProvider.insertReportLog(reportLog);
-                } 
-                catch (ProviderException pe) 
-                {
-                    log.warn(pe);
-                }
-
-                return ORStatics.JPIVOT_ACTION;
-            }   
-						
 			return SUCCESS;
 		}
 		catch (ProviderException e)

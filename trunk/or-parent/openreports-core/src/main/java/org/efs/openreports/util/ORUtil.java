@@ -153,22 +153,6 @@ public class ORUtil
 		return text;
 	}
     
-    /*
-     * All JPivot objects must be removed from session each time a new JPivot report is run.
-     */
-    public static void resetOlapContext(ActionContext context)
-    {
-        Iterator<?> i = context.getSession().keySet().iterator();
-        while(i.hasNext())
-        {
-            String key = (String) i.next();
-            if (key.indexOf("tonbeller") > -1 || key.indexOf("01") > -1)
-            {                    
-                context.getSession().remove(key);               
-            }
-        }
-    }
-    
     public static Locale getLocale(String locale)
     {
     	if (locale == null) return Locale.getDefault();

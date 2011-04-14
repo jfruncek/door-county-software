@@ -1,0 +1,33 @@
+
+ There has been no status update activity on Book, TestBook1 since Wed, 13 Apr 2011 07:29:54 PM CDT.  Removing status tracking (it is possible reports are still running).
+Book : TestBook1
+
+Failures: 5
+   TestBook1: Test Book Desc 1: 
+      TestBatch1: Test Batch 1 Desc: success
+         TestReport1: Test Report 1 Desc: success
+         TestReport2: Test Report 2 Desc: success
+      TestBatch2: Test Batch 2 Desc: success
+         TestReport3: Test Report 3 Desc: fail
+               faildy-fail-fail
+
+Incomplete: 1
+   TestBook1: Test Book Desc 1: 
+      TestBatch2: Test Batch 2 Desc: 
+         TestReport4: Test Report 4 Desc: 
+
+
+
+===========================================================================
+TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST 
+===========================================================================
+This is a test of the OpenReports Development Report Email System. 
+If this had been an actual production report, it would have been sent 
+to the following addresses: 
+
+
+null
+
+
+This concludes this test of the OpenReports Development Report Email System.
+

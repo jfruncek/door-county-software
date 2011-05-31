@@ -18,3 +18,4 @@
  * Must mvn install Oracle driver locally: `mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.1 -Dpackaging=jar -Dfile=ojdbc6.jar`
  * Added a `ReportPostProcessor` interface (no impl)
  * Need to decide about `StarkApplicationContext`
+ * Should remove Oracle dependency and instead rely on HSQLDB, postgres or mysql by default

@@ -2,10 +2,10 @@
 
 == Aquaponics ==
 
-# Is the garage too cold? Can the water be heated?
-# Will a barrel stunt the size/growth of the fish?
-# Where to get the tilapia?
-# What to feed/where to obtain?
+  # Is the garage too cold? Can the water be heated?
+  # Will a barrel stunt the size/growth of the fish?
+  # Where to get the tilapia?
+  # What to feed/where to obtain?
 
 == Cold Frames ==
 

@@ -7,7 +7,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import oracle.sql.CLOB;
+/* import oracle.sql.CLOB; Uncomment if Oracle CLOB support desired. See two more references below! */
 
 import org.apache.commons.beanutils.BasicDynaClass;
 import org.apache.commons.beanutils.DynaClass;
@@ -101,9 +101,9 @@ public class SqlU {
         // Default to Object type if no class name could be retrieved
         // from the metadata
         Class<?> clazz = Object.class;
-        if( CLOB.class.getName().equals( className ) ) {
+        /*if( CLOB.class.getName().equals( className ) ) {
             clazz = String.class;
-        } else if( className != null ) {
+        } else*/ if( className != null ) {
             clazz = loadClass( className );
         }
         return new DynaProperty( name, clazz );
@@ -138,10 +138,10 @@ public class SqlU {
         // Safe since the properties were created from the result set.
         for( int i = 0; i < properties.length; i++ ) {
             Object object = resultSet.getObject( i + 1 );
-            if( object instanceof CLOB ) {
+            /*if( object instanceof CLOB ) {
                 CLOB clob = (CLOB) object;
                 row[i] = clob.getSubString( 1, ( (int) clob.length() ) );
-            } else if( object == null || object instanceof Serializable ) {
+            } else*/ if( object == null || object instanceof Serializable ) {
                 row[i] = (Serializable) object;
             } else {
                 log.error( "Object not serializable from ResultSet for property: " + properties[i].getName()

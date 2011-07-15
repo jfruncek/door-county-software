@@ -253,12 +253,13 @@
             <artifactId>hsqldb</artifactId>
             <version>1.8.0.7</version>
         </dependency>
+        <!-- Uncomment for Oracle support; driver not available in Maven - must be added manually to local repo
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
             <version>11.2.0.1</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency> -->
     </dependencies>
     <reporting>
         <plugins>

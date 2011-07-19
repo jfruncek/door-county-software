@@ -72,3 +72,4 @@ $ mvn install:install-file -DgroupId=javax.jms -DartifactId=jms -Dversion=1.1 -D
 $ mvn install:install-file -DgroupId=com.sun.jdmk -DartifactId=jmxtools -Dversion=1.2.1 -Dpackaging=jar -Dfile=jmxtools.jar
 $ mvn install:install-file -DgroupId=com.sun.jmx -DartifactId=jmxri -Dversion=1.2.1 -Dpackaging=jar -Dfile=jmxri.jar
 }}}
+If you are running the Maven Jetty Plugin on a Windows platform you may need to move your local Maven repository to a directory that does not contain spaces. Some have reported issues on Jetty startup caused by a repository that was being stored under `C:\Documents and Settings\<user>`. The solution to this problem is to move your local Maven repository to a directory that does not contain spaces and redefine the location of your local repository

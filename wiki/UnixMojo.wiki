@@ -1,6 +1,6 @@
 #summary Various *nix shell (generally Bash) commands that I've used
 
-Create a multiline file
+Create a multiline file (also redirects stdout to file for other commands)
 
 {{{
 $ cat > fox.dog

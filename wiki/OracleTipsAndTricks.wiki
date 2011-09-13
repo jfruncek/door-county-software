@@ -9,13 +9,21 @@ select job_name, job_group, description, job_class_name
 = URL examples =
 
 {{{
-jdbc:oracle:thin:@mke-racdb-apple-vip:1524/mkedev
+jdbc:oracle:thin:@apple:1521/mkedev
 
 jdbc:oracle:thin:@(description=(address_list=
-      (address=(host=mke-racdb-apple-vip)(protocol=tcp)(port=1524))
-      (address=(host=mke-racdb-orange-vip)(protocol=tcp)(port=1524))
-      (address=(host=mke-racdb-banana-vip)(protocol=tcp)(port=1524))
+      (address=(host=apple)(protocol=tcp)(port=1521))
+      (address=(host=orange)(protocol=tcp)(port=1521))
+      (address=(host=banana)(protocol=tcp)(port=1521))
    (load_balance=yes))(connect_data=(service_name=dev)))
+}}}
+
+{{{
+jdbc:oracle:thin:@(description=(address=(protocol=TCP)(host=test)(port=1521))(connect_data=(sid=ECTEST)))
+}}}
+
+{{{
+sqlplus sa/dev@EVERMORE 
 }}}
 
 = Anonymous block =

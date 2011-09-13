@@ -19,10 +19,10 @@ myvar='A value that wont be expanded'
 export myvar
 }}}
 
-Copy source, removing the '.svn' directories.
+Set terminal mode 
 
 {{{
-dont know that I ever made this work
+TERM=vt100
 }}}
 
 Find an open port / lookup associated PID
@@ -42,4 +42,10 @@ Remove the .svn directories
 
 {{{
 find . -name '.svn' -exec rm -Rf '{}' \;
+}}}
+
+Copy source, removing the '.svn' directories.
+
+{{{
+dont know that I ever made this work
 }}}

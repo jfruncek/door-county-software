@@ -26,6 +26,10 @@ jdbc:oracle:thin:@(description=(address=(protocol=TCP)(host=test)(port=1521))(co
 sqlplus sa/dev@EVERMORE 
 }}}
 
+{{{
+sqlplus 'sa/dev@(description=(address=(protocol=TCP)(host=test)(port=1521))(connect_data=(sid=ECTEST)))'
+}}}
+
 = Anonymous block =
 
 {{{

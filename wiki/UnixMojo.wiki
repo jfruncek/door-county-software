@@ -32,6 +32,12 @@ netstat -o
 ps -ef (cygwin: ps -eWf)
 }}}
 
+What is my IP on Solaris
+
+{{{
+ifconfig -a
+}}}
+
 List all users
 
 {{{

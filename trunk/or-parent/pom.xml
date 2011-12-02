@@ -1,97 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.door</groupId>
-    <artifactId>openreports-parent</artifactId>
-    <packaging>pom</packaging>
-    <name>openreports-parent</name>
-    <version>1.0.0</version>
-    <modules>
-        <module>openreports-core</module>
-        <module>openreports-webapp</module>
-    </modules>
-    <description>Top-level project for Door County Software fork of http://sourceforge.net/projects/oreports/</description>
-    <url>http://code.google.com/p/door-county-software/</url>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.0.2</version>
-                <configuration>
-                    <source>6</source>
-                    <target>6</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.1</version>
-            </plugin>
-            <!-- Run the application using "mvn jetty:run" -->
-            <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>maven-jetty-plugin</artifactId>
-                <version>6.1.16</version>
-                <configuration>
-                    <contextPath>/or</contextPath>
-                    <webAppSourceDirectory>${basedir}/openreports-webapp/src/main/webapp</webAppSourceDirectory>
-                    <webXml>${basedir}/openreports-webapp/src/main/webapp/WEB-INF/web.xml</webXml>
-                    <!-- Log to the console. -->
-                    <requestLog implementation="org.mortbay.jetty.NCSARequestLog">
-                        <!-- This doesn't do anything for Jetty, but is a workaround for a Maven bug
-                             that prevents the requestLog from being set. -->
-                        <append>true</append>
-                    </requestLog>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <repositories>
-        <!--
-            <repository> <id>sourceforge.net</id> <name>jXLS snapshot repository</name>
-            <url>http://jxls.sourceforge.net/repository/snapshots</url> </repository>
-        -->
-        <!--<repository>
-           <id>jboss.org</id>
-           <name>JBoss Nexus</name>
-           <url>
-              https://repository.jboss.org/nexus/
-           </url>
-        </repository>
-        --><repository>
-            <id>ibiblio.org</id>
-            <name>Apache Server</name>
-            <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
-        </repository>
-    </repositories>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>commons-dbcp</groupId>
-                <artifactId>commons-dbcp</artifactId>
-                <version>1.3</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>1.4</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-lang</groupId>
-                <artifactId>commons-lang</artifactId>
-                <version>2.1</version>
-            </dependency>
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>1.2.15</version>
-                <scope>provided</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    
+    <groupId>com.teramedica</groupId>
+    <artifactId>openreports</artifactId>
+    <name>openreports</name>
+    <description>Project for Open Reports web application (war)</description>
+    <packaging>war</packaging>
+    <version>5.6.0</version>
+    <url>http://teramedica.com</url> 
+
     <dependencies>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.1</version>
+        </dependency>    
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
@@ -103,17 +37,20 @@
             <version>3.2</version>
        </dependency>
         <dependency>
-            <groupId>commons-dbcp</groupId>
-            <artifactId>commons-dbcp</artifactId>
+            <groupId>commons-digester</groupId>
+            <artifactId>commons-digester</artifactId>
+            <version>1.7</version>
         </dependency>
         <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.2</version>
         </dependency>
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-        </dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.7.0</version>
+        </dependency>                 
         <dependency>
             <groupId>displaytag</groupId>
             <artifactId>displaytag</artifactId>
@@ -132,14 +69,14 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.opensymphony</groupId>
-            <artifactId>xwork</artifactId>
-            <version>2.0.4</version>
+            <groupId>org.apache.struts.xwork</groupId>
+            <artifactId>xwork-core</artifactId>
+            <version>2.2.1</version>
         </dependency>
         <dependency>
             <groupId>jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
-            <version>3.5.3</version>
+            <version>4.0.1</version>
             <exclusions>
                 <exclusion>
                     <artifactId>xml-apis</artifactId>
@@ -151,7 +88,6 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.15</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.sf.jxls</groupId>
@@ -166,12 +102,17 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.5-FINAL</version>
+            <version>3.8-beta3</version>
+        </dependency>
+        <dependency>
+            <groupId>stax</groupId>
+            <artifactId>stax</artifactId>
+            <version>1.2.0_rc2-dev</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>3.5-FINAL</version>
+            <version>3.8-beta3</version>
             <exclusions>
                 <exclusion>
                     <artifactId>xml-apis</artifactId>
@@ -186,18 +127,28 @@
                     <groupId>org.apache.xmlbeans</groupId>
                 </exclusion>
             </exclusions>
+        </dependency> 
+        <dependency>
+            <groupId>xmlbeans</groupId>
+            <artifactId>xmlbeans</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>3.8-beta3</version>
         </dependency>
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
             <version>2.2.1</version>
-        </dependency><!--
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>3.0.5.RELEASE</version>
         </dependency>
-        --><dependency>
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.12.1.GA</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>2.5.6</version>
@@ -210,7 +161,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring</artifactId>
-            <version>${org.springframework.version}</version>
+            <version>2.0.8</version>
         </dependency>
         <dependency>
             <groupId>net.sf.opencsv</groupId>
@@ -229,49 +180,168 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>commons-cli</groupId>
-        	<artifactId>commons-cli</artifactId>
-        	<version>1.2</version>
-        	<type>jar</type>
-        	<scope>compile</scope>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.2</version>
+            <type>jar</type>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.xbean</groupId>
-        	<artifactId>xbean-spring</artifactId>
-        	<version>3.2</version>
+            <groupId>org.apache.xbean</groupId>
+            <artifactId>xbean-spring</artifactId>
+            <version>3.2</version>
         </dependency>
         <dependency>
-        	<groupId>com.thoughtworks.xstream</groupId>
-        	<artifactId>xstream</artifactId>
-        	<version>1.3.1</version>
-        	<type>jar</type>
-        	<scope>compile</scope>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.3.1</version>
+            <type>jar</type>
+            <scope>compile</scope>
         </dependency>
-        <!--  For running in a development environment using Jetty -->
-        <dependency>
-            <groupId>hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-            <version>1.8.0.7</version>
-        </dependency>
-        <!-- Uncomment for Oracle support; driver not available in Maven - must be added manually to local repo
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
             <version>11.2.0.1</version>
-            <scope>provided</scope>
-        </dependency> -->
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.xfire</groupId>
+            <artifactId>xfire-all</artifactId>
+            <version>1.2.6</version>
+            <exclusions>
+            <exclusion>
+                    <artifactId>xfire-xmlbeans</artifactId>
+                    <groupId>org.apache.xmlbeans</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.jms</groupId>
+            <artifactId>jms</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.0.12</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>jfree</groupId>
+            <artifactId>jcommon</artifactId>
+            <version>1.0.15</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.16</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>ognl</groupId>
+            <artifactId>ognl</artifactId>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlcode.strut2gwtplugin</groupId>
+            <artifactId>struts2gwtplugin</artifactId>
+            <version>1.02</version>
+        </dependency>       
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-spring-plugin</artifactId>
+            <version>2.2.3</version>
+        </dependency>        
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.2.2</version>
+        </dependency> 
+        <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext</artifactId>
+            <version>2.1.7</version>
+        </dependency>   
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-dojo-plugin</artifactId>
+            <version>2.2.3</version>
+        </dependency> 
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>1.8.0</version>
+        </dependency> 
     </dependencies>
-    <reporting>
+
+    <build>
+        <finalName>openreports</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.1</version>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
             </plugin>
+            
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.1.10</version>
+                <configuration>
+                  <scanIntervalSeconds>5</scanIntervalSeconds>
+                  <connectors>
+                    <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                      <port>8080</port>
+                      <maxIdleTime>60000</maxIdleTime>
+                    </connector>
+                  </connectors>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warName>openreports</warName>
+                    <webResources>
+                        <resource>
+                          comment this is relative to the pom.xml directory 
+                          <directory>external-resource</directory>
+                        </resource>
+                     </webResources>
+                     <packagingExcludes>WEB-INF/lib/xerces*.jar</packagingExcludes>
+                </configuration>
+            </plugin>                                                                                                                         
         </plugins>
-    </reporting>
-    <properties>
-        <org.springframework.version>2.0.8</org.springframework.version>
-    	<project.build.finalName>openreports</project.build.finalName>
-	</properties>
+    </build>                                                                                                                                                                                                                                                
 </project>

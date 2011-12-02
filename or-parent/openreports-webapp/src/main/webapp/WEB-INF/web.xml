@@ -32,6 +32,8 @@
 		<filter-name>struts</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	
 
 	<!-- resources initializer -->
 	<listener>
@@ -107,21 +109,33 @@
        <http-method>GET</http-method>
        <http-method>POST</http-method>
      </web-resource-collection>
-   </security-constraint>
+     <!--  added by syamala balantrapu -->
+    <!--   <auth-constraint>
+            <role-name>JBossAdmin</role-name>
+        </auth-constraint>
+        -->
+       </security-constraint>
    
-
-<!-- TODO <login-config>
+ 
+ <login-config>
       <auth-method>BASIC</auth-method>
       <realm-name>Reporting Server</realm-name>
-   </login-config> -->   
+   </login-config>  
+ 
+ <!--    
+   <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>JBoss JMX Console</realm-name>
+    </login-config>
+ -->  
 
-   <!-- 
+
    <security-role>
-      <role-name>IT - Developers</role-name>
+      <role-name>manager</role-name>
    </security-role>
-   -->
+
    
-   <!-- 
+   <!--  
    <security-role>
       <role-name>JBossAdmin</role-name>
    </security-role>

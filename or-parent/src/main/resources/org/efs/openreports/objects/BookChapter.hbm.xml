@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false">
+
+    <class table="ZOR_BOOK_CHAPTER" name="org.efs.openreports.objects.BookChapter">
+        
+        <id name="id" column="CHAPTER_ID" type="java.lang.Integer">
+            <generator class="native">
+                <param name="sequence">ZOR_HIBERNATE_SEQUENCE</param>
+            </generator>
+        </id>
+        
+        <property name="name" column="NAME" not-null="true" />
+        
+        <property name="exportType" column="EXPORT_TYPE" type="java.lang.Integer" />
+
+        <many-to-one name="report" column="REPORT_ID"
+                     class="org.efs.openreports.objects.Report" />
+                     
+         <map name="parameters" table="ZOR_CHAPTER_PARAMETER" >
+            <key column="CHAPTER_ID"/>
+            <map-key column="NAME" type="string" />
+            <element column="VALUE" type="string"/>
+         </map>            
+                    
+    </class>
+    
+</hibernate-mapping>                    

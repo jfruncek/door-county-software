@@ -1,4 +1,12 @@
-#summary Thoughts and ideas around reports and reporting
+#summary Mavenized Open Reports and other reporting ideas
+
+= Mavenized Open Reports =
+
+ * Removed JFree (including Chart reports), Mondrian (including JPivot & WCF), BIRT, eSpreadsheet, Stark custom
+ * Must mvn install missing (non-Maven) jars including JDBC drivers and Jasper - see doc/Jars_added folder)
+ * Added a `ReportPostProcessor` interface (no impl)
+ * Nearly works with jetty:run - issue with security
+ * Should add a pure java db config
 
 = Testing Reports =
 
@@ -11,11 +19,3 @@
      * Verify totals against a check query or among reports
      * Correct "as of" date for parameter, fund description, report title
      * For some reports they don't like it if there's more than one page
-
-= Mavenized Open Reports =
-
- * Removed JFree (including Chart reports), Mondrian (including JPivot & WCF), BIRT, eSpreadsheet, Stark custom
- * Must mvn install Oracle driver locally: `mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.1 -Dpackaging=jar -Dfile=ojdbc6.jar`
- * Added a `ReportPostProcessor` interface (no impl)
- * Need to decide about `StarkApplicationContext`
- * Should remove Oracle dependency and instead rely on HSQLDB, postgres or mysql by default

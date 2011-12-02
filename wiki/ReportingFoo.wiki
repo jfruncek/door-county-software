@@ -3,7 +3,7 @@
 = Mavenized Open Reports =
 
  * Removed JFree (including Chart reports), Mondrian (including JPivot & WCF), BIRT, eSpreadsheet, Stark custom
- * Must mvn install missing (non-Maven) jars including JDBC drivers and Jasper - see doc/Jars_added folder)
+ * Must mvn install missing (non-Maven) jars including JDBC drivers and Jasper - see doc/Jars_added folder
  * Added a `ReportPostProcessor` interface (no impl)
  * Nearly works with jetty:run - issue with security
  * Should add a pure java db config

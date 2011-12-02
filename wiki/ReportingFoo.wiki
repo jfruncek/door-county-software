@@ -8,9 +8,9 @@
  * Nearly works with jetty:run - issue with security
  * Should add a pure java db config
 
-= Testing Reports =
+== Testing Reports ==
 
-== What can we verify? ==
+=== What can we verify? ===
   
      * Runs for a given set of parameters
      * Tables exist with certain headings

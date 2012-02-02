@@ -55,3 +55,9 @@ Copy source, removing the '.svn' directories.
 {{{
 dont know that I ever made this work
 }}}
+
+Grep select files recursively
+
+{{{
+ find . -name *.java | xargs -i grep -H stark {}
+}}}

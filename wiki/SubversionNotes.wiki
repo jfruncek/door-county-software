@@ -27,3 +27,6 @@ svn commit -m "First commit"
 }}}
 That should have your project committed, and changes to ./plugins/core and ./web-app/WEB-INF/ should be ignored by SVN.
 You will not need to check out this project as we have used the "in place import" technique.
+
+=Reverting=
+* Doesn't remove non-versioned files 

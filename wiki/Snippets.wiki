@@ -20,3 +20,8 @@
 {{{
 javascript:%20AddToCalendar('google',%20'https://www.eventbrite.com',%20'580571505',%20'');
 }}}
+
+==Send email using java
+{{{
+$ java -cp '.\bin;C:\evercore\trunk\jboss\server\ti2m\lib\mail.jar' utilities.MsgSend -M 172.16.10.4 -s 'Software Developer Internship' -o careers@teramedica.com -b jfruncek@teramedica.com -i thankyou.txt 'name <email@gmail.com>'
+}}}

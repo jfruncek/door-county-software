@@ -1,0 +1,153 @@
+<h2>Summary</h2>
+<table>
+<tbody>
+<tr>
+<th>
+<p>Framework</p></th>
+<th>
+<p>Language/Platform</p></th>
+<th>
+<p>Ajax Support</p></th>
+<th>
+<p>Javascript (see Drag &amp; Drop, below)</p></th>
+<th>
+<p><a href="http://developers.sun.com/portalserver/reference/techart/jsr168/">Portal Support</a></p></th></tr>
+<tr>
+<td>
+<p><a href="http://struts.apache.org/2.2.3.1/index.html">Struts2</a></p></td>
+<td>
+<p>Java/JVM</p></td>
+<td>
+<p><a href="http://struts.apache.org/2.x/docs/dwr-plugin.html">DWR Plugin</a> <a href="http://code.google.com/p/struts2-jquery/">JQuery Plugin</a></p></td>
+<td>
+<p>&nbsp;</p></td>
+<td>
+<p><a href="http://struts.apache.org/2.x/docs/portlet-plugin.html">Portlet Plugin</a></p></td></tr>
+<tr>
+<td>
+<p><a href="http://tapestry.apache.org/">Tapestry</a></p></td>
+<td>
+<p>Java/JVM</p></td>
+<td>
+<p><a href="http://tapestry.apache.org/ajax-and-zones.html">built-in</a></p></td>
+<td>
+<p>Prototype, Scriptaculous</p></td>
+<td>
+<p>none, ootb</p></td></tr>
+<tr>
+<td>
+<p><a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a></p></td>
+<td>
+<p>Java/JVM</p></td>
+<td>
+<p><a href="http://en.wikipedia.org/wiki/Google_Web_Toolkit">built-in</a> using JQuery</p></td>
+<td>
+<p>&nbsp;</p></td>
+<td>
+<p><a href="http://code.google.com/p/gwtportlets/">gwtportlets</a></p></td></tr>
+<tr>
+<td>
+<p><a href="http://rubyonrails.org/screencasts/rails3/">Ruby on Rails</a></p></td>
+<td>
+<p><a href="http://en.wikipedia.org/wiki/Ruby_%28programming_language%29">Ruby</a>/<a href="http://en.wikipedia.org/wiki/Ruby_MRI">Ruby MRI</a>/<a href="http://en.wikipedia.org/wiki/JRuby">JRuby</a>/</p></td>
+<td>
+<p><a href="http://www.loudthinking.com/arc/000428.html">built-in</a></p></td>
+<td>
+<p>any/all (plug-able)</p></td>
+<td>
+<p>&nbsp;</p></td></tr>
+<tr>
+<td>
+<p><a href="http://grails.org">Grails</a></p></td>
+<td>
+<p>Groovy,Java/JVM</p></td>
+<td>
+<p>&nbsp;</p></td>
+<td>
+<p>Prototype, Scriptaculous</p></td>
+<td>
+<p>&nbsp;</p></td></tr>
+<tr>
+<td>
+<p><a href="http://www.openxava.org/">OpenXava</a></p></td>
+<td>
+<p>Java,Groovy/JVM</p></td>
+<td>
+<p>&nbsp;</p></td>
+<td>
+<p>&nbsp;</p></td>
+<td>
+<p>Liferay</p></td></tr>
+<tr>
+<td>
+<p><a href="http://incubator.apache.org/isis">Apache Isis</a></p></td>
+<td>
+<p>Java/JVM</p></td>
+<td>
+<p>&nbsp;</p></td>
+<td>
+<p>&nbsp;</p></td>
+<td>
+<p>&nbsp;</p></td></tr>
+<tr>
+<td>
+<p><a href="http://www.primefaces.org/documentation.html">Prime Faces</a></p></td>
+<td>
+<p>Java/JVM</p></td>
+<td>
+<p><a href="http://jquery.org/">built in using JQuery</a></p></td>
+<td>
+<p>see <a href="http://www.primefaces.org/showcase/ui/home.jsf">showcase</a></p></td></tr>
+<tr>
+<td>
+<p><a href="http://www.playframework.org/">Play!</a></p></td>
+<td>
+<p>Java,Scala/JVM</p></td></tr></tbody></table>
+<p><a href="http://www.webdesignish.com/the-best-web-development-frameworks.html">List of frameworks in PHP, Javascript, Java, etc.</a></p>
+<h4>UI Priorities</h4>
+<p>Determine how the chosen framework would address</p>
+<ul>
+<li>Skinning (CSS)</li>
+<li>Component capabilities vs UI design goals</li>
+<li>Ajax</li>
+<li>Support for Java script via framework</li>
+<li>Templating</li>
+<li>Service or business logic layer with transactions (Spring? CODI? Orchestra?)</li>
+<li>Persistence wiring</li>
+<li>Criteria objects in Hibernate (for robust searches)</li>
+<li>i18n (internationalization)</li>
+<li>Mobile</li></ul>
+<h2>Notes</h2>
+<h3>Primefaces</h3>
+<p><a href="http://psm-blog.blogspot.com/2011/04/how-to-use-primefaces-with-grails.html">with Grails</a> <a href="http://www.coreservlets.com/JSF-Tutorial/jsf2/">JSF 2.0 Tutorial</a> <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=4&amp;ved=0CDwQFjAD&amp;url=http%3A%2F%2Fwww.pearltrees.com%2Fcrdicarlo%2Fjsf%2Fid2568663&amp;ei=ieWWT-boGcTKgQfA__iBDg&amp;usg=AFQjCNH3_RpdQ7fNkf96flRx82ppW7EGlQ">further reading</a></p>
+<h3>Google Web Toolkit (GWT)</h3>
+<ul>
+<li>Write AJAX applications in Java, compile to JavaScript that runs across all browsers, including mobile browsers.</li></ul>
+<ul>
+<li>Uses Guice for Inversion of Control (IOC)</li></ul>
+<h3>Grails</h3>
+<ul>
+<li>Has plug-ins for different view technologies such as GWT, RichUI (mix of Ajax libraries)</li>
+<li>You can <a href="http://grails.org/GRAG">generate a domain model from the database</a></li></ul>
+<h3>Tapestry</h3>
+<ul>
+<li>Component-based framework with many <a href="http://tapestry.apache.org/component-reference.html">built-in components </a> and <a href="http://tapestry.apache.org/modules.html">extension modules</a></li></ul>
+<ul>
+<li>Pages, components and <a href="http://tapestry.apache.org/modules.html">component mixins</a> are POJOs written in Java, Groovy or Scala.</li></ul>
+<ul>
+<li>Favors annotation and convention over configuration using xml. It has a <a href="http://tapestry.apache.org/ioc.html">built-in IOC container</a></li></ul>
+<ul>
+<li>Spring &amp; Hibernate integration</li>
+<li><a href="http://tynamo.org/">Tynamo is an add-on that does domain-driven UI generation</a></li></ul>
+<h3>OpenXava</h3>
+<ul>
+<li><a href="http://www.tikalk.com/java/domain-driven-java-frameworks-review">domain-driven framework</a>, which in part means the UI is generated from simple model classes.</li></ul>
+<p><a href="http://java.dzone.com/articles/automatic-user-interface">Discussion about generated UIs</a></p>
+<h3>Drag &amp; Drop</h3>
+<p>Possible uses for drag and drop in the Evercore UI supported by current Javascript libraries.</p>
+<ul>
+<li>Arranging sections on a portal style homepage</li>
+<li>More interactive selection from a list of items</li>
+<li>Interactive ordering of a list</li>
+<li>Graphical configuration of storage</li></ul>
+<p><a href="http://www.quirksmode.org/js/dragdrop.html">Example of drag &amp; drop using Javascript</a></p>

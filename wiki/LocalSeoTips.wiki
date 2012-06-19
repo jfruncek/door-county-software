@@ -1,0 +1,10 @@
+#summary Search Engine Optimization (SEO) Tips for Localized (Geolocated) Searches
+
+From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [http://savvypanda.com/blog/factors-of-local-seo.html Luke Summerfield of SavvyPanda]
+
+== Why Local? ==
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

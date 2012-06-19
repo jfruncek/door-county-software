@@ -79,5 +79,29 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
   * Partnerships
   * Events
   * OnMilwaukee, JSOnline, etc.
-  * [http://yelp.com Yelp] [http://Getlisted.org Get Listed]
+  * [http://yelp.com Yelp] [http://Getlisted.org Get Listed] - claim listing, fill out fully, keep consistent
   * Yahoo, Bing, Mapquest, Citysearch
+
+== Citation == 
+
+  * Mentions of your *NAP* on another website (no link required!)
+  * *TODO*
+    * Check _your business_ + _location_ `-site: your url`
+    * Check your competitors
+
+== Reviews ==
+
+  * Need 5-8 customers to do so
+  * *Don't* Fake or pay for reviews
+  * *Don't* Setup a review computer
+
+== You Tube ==
+
+  * Easy indexing
+  * iFrame can provide link to your link to your video (?)
+  * Video captions `(Classic Acupuncture: ... by ...)`
+  * Video sitemap
+
+
+
+  

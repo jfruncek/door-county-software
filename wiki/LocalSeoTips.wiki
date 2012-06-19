@@ -102,6 +102,23 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
   * Video captions `(Classic Acupuncture: ... by ...)`
   * Video sitemap
 
+== Panoramio ==
 
+  * Google prefers
+  * Optimized for local
 
-  
+== Flickr ==
+
+  * Yahoo prefers
+  * More popular
+
+== Foursquare ==
+
+  * Specials for check-ins / mayors
+  * also Yelp, Google+
+
+== Twitter, Facebook ==
+
+  * Consistent, local content once or more _per day_
+  * Work with other businesses
+  * Follower wonk or clout scores

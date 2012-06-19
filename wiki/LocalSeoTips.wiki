@@ -17,9 +17,31 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
 == On-site SEO ==
 
   * Name address and phone ("NAP") in footer 
-  * Link to Google places and microdata
+  * Link to Google places and *Microdata*
   * Clean and clear menus (don't double link content)
   * Embed a Gmap on "Contact Us" page
   * Location-based "long-tail" keywords
   * Meta description < 155 characters (shows up in search results) 
   * Page titles: Geo + keyword + branded < 75 characters 
+  * Link titles (anchors) & Alt-tags
+  * Images: where is the image? + simple Alt text
+
+ Put what content you consider important in the footer
+
+== Blogging ==
+
+  * Brings in traffic (through links)
+  * Gear towards local content
+  * Establish authority and brand personality
+  * Connect with audience
+  * Yes, it is time consuming
+
+== Website Roadmap ==
+
+  * Use XMAP extension
+  * Index Google and Bing (30% use it)
+  * Consider videos linked to YouTube
+
+== Microdata ==
+
+  * [Schema.org]

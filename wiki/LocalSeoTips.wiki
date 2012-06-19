@@ -44,4 +44,22 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
 
 == Microdata ==
 
-  * [Schema.org]
+  * [http://Schema.org Schema.org]
+  * Reviews, events, authors, etc.
+
+== Google Places ==
+
+  * Outrank organic (non-geolocated) search results
+  * Level the playing field
+  * Mobile friendly
+  * TODO
+    * Claim and fill out your listing 100%
+    * Exact business name - no keywords
+    * Use all 5 categories - use predefined first
+    * Extra details, e.g. social media profile
+    * As many photos and videos as possible
+    * Check and correct marker location
+    * Add coupons and updates
+    * Encourage customers to review, blog or site
+    * [http://www.panoramio.com/ Panoramio] using same gmail account and tag the photos
+

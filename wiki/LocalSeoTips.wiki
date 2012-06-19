@@ -10,6 +10,6 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
 == Why optimize for local? ==
 
   * Google's "Penguin" updates Apr 24 2012
-  *# blend local and organic results
-  *# optimized for tablet and mobile devices
-  *# punish link networks, keyword stuffing, gaming the system 
+    * blend local and organic results
+    * optimized for tablet and mobile devices
+    * punish link networks, keyword stuffing, gaming the system 

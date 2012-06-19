@@ -4,7 +4,12 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
 
 == Why Local? ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * 30% of all searches
+  * 50% of these are from mobile devices
+
+== Why optimize for local? ==
+
+  * Google's "Penguin" updates Apr 24 2012
+  *# blend local and organic results
+  *# optimized for tablet and mobile devices
+  *# punish link networks, keyword stuffing, gaming the system 

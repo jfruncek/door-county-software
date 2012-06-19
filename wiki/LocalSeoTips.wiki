@@ -122,3 +122,10 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
   * Consistent, local content once or more _per day_
   * Work with other businesses
   * Follower wonk or clout scores
+
+== Mobile ==
+
+  * 50% of searches
+  * 61% call after search
+  * 59% visit!
+  * 40% go to competitors after bad mobile experience

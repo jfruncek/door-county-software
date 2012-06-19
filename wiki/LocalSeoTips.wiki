@@ -13,6 +13,7 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
     * blend local and organic results
     * optimized for tablet and mobile devices
     * punish link networks, keyword stuffing, gaming the system 
+    * See also *BAD* and *GOOD* below
   
 == On-site SEO ==
 
@@ -52,7 +53,7 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
   * Outrank organic (non-geolocated) search results
   * Level the playing field
   * Mobile friendly
-  * TODO
+  * *TODO*
     * Claim and fill out your listing 100%
     * Exact business name - no keywords
     * Use all 5 categories - use predefined first
@@ -63,3 +64,20 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
     * Encourage customers to review, blog or site
     * [http://www.panoramio.com/ Panoramio] using same gmail account and tag the photos
 
+== BAD ==
+
+  * Link networks / Link pages
+  * Buying links
+  * Low weighting: forums, comments
+ 
+== GOOD ==
+
+  * Guest blogging
+  * Interviews
+  * Press release
+  * Sponsorships
+  * Partnerships
+  * Events
+  * OnMilwaukee, JSOnline, etc.
+  * [http://yelp.com Yelp] [http://Getlisted.org Get Listed]
+  * Yahoo, Bing, Mapquest, Citysearch

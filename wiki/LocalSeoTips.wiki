@@ -13,3 +13,13 @@ From [http://joomlamilwaukee.com/ Milwaukee Joomla User Group] May 20 2012 by [h
     * blend local and organic results
     * optimized for tablet and mobile devices
     * punish link networks, keyword stuffing, gaming the system 
+  
+== On-site SEO ==
+
+  * Name address and phone ("NAP") in footer 
+  * Link to Google places and microdata
+  * Clean and clear menus (don't double link content)
+  * Embed a Gmap on "Contact Us" page
+  * Location-based "long-tail" keywords
+  * Meta description < 155 characters (shows up in search results) 
+  * Page titles: Geo + keyword + branded < 75 characters 

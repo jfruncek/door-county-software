@@ -44,3 +44,11 @@ def hibernateSession = [createQuery: query] as Session
 {{{
 this.class.classLoader.rootLoader.URLs.each{ println it }
 }}}
+
+=JVM=
+
+==Verbose class loading==
+
+{{{
+set JAVA_OPTS=-verbose:class
+}}}

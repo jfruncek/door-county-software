@@ -7,6 +7,10 @@
   # Where to get the tilapia?
   # What to feed/where to obtain?
 
+== Mark 2 ==
+
+ # http://www.aquaponiclynx.com/aquaponic-lynx-llc/aquaponics-in-detail/sept-2011-aquaponic-plumbing-class CHIFT-PIST or CHOP Mark 2? Clean or dirty water sump?
+
 == Cold Frames ==
 
   * Height: 2 ft (!), higher in back for slant

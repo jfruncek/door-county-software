@@ -4,8 +4,8 @@
 
   # Is the garage too cold? Can the water be heated?
   # Will a barrel stunt the size/growth of the fish? Yes
-  # Where to get the tilapia?
-  # What to feed/where to obtain?
+  # Where to get the tilapia? [http://rdaquafarms.com/index.html I got mine here]
+  # What to feed/where to obtain? 
 
 == Mark 2 ==
 

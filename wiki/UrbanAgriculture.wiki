@@ -3,13 +3,14 @@
 == Aquaponics ==
 
   # Is the garage too cold? Can the water be heated?
-  # Will a barrel stunt the size/growth of the fish?
+  # Will a barrel stunt the size/growth of the fish? Yes
   # Where to get the tilapia?
   # What to feed/where to obtain?
 
 == Mark 2 ==
 
  # http://www.aquaponiclynx.com/aquaponic-lynx-llc/aquaponics-in-detail/sept-2011-aquaponic-plumbing-class CHIFT-PIST or CHOP Mark 2? Clean or dirty water sump?
+ # Wasabi [http://ncalternativecropsandorganics.blogspot.com/2010/03/can-i-grow-wasabi-in-western-north.html article] 
 
 == Cold Frames ==
 

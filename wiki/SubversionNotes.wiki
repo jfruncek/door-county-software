@@ -1,5 +1,20 @@
 #summary SVN Tips n Tricks
 
+= Search SVN Repository =
+
+{{{
+svn list -vR svn://server/ | grep filename
+}}}
+
+or on Windows
+
+{{{
+svn list -vR svn://server/ | findstr filename
+}}}
+
+You can also add a path to a folder (commonly known as a repo)
+
+
 = Creating a new project and putting it into SVN =
 
 _This is written for Grails but applies to any new project_ [http://www.grails.org/Checking+Projects+into+SVN More info]

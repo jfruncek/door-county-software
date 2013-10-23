@@ -68,6 +68,12 @@ Remove files recursively
 find . -type f | xargs -i rm {}
 }}}
 
+Remove certain numeric named directories
+
+{{{
+find -regextype posix-extended -regex '.+[[:digit:]]+/[[:digit:]]+$' | xargs -i rm -R {}
+}}}
+
 List disk space usage
 
 {{{

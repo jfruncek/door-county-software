@@ -62,6 +62,12 @@ Grep select files recursively
  find . -name *.java | xargs -i grep -H stark {}
 }}}
 
+Remove files recursively
+
+{{{
+find . -type f | xargs -i rm {}
+}}}
+
 List disk space usage
 
 {{{

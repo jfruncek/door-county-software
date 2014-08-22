@@ -85,3 +85,9 @@ List disk space usage
 {{{
 du -h --max-depth=1 <dir>
 }}}
+
+Extract only certain files from a zip
+
+{{{
+ unzip -l 4144777710.zip | grep jpeg | sed 's/.* .* .* \(.*\)/\1/'
+}}}

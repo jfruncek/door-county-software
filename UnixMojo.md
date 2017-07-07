@@ -69,7 +69,7 @@ find . -type f | xargs -i rm {}
 Remove certain numeric named directories
 
 ```
-find -regextype posix-extended -regex '.+[[:digit:]]+/[[:digit:]]+$' | xargs -i rm -R {}
+find -regextype posix-extended -regex '.+[[:digit:]]+$' | xargs -i rm -R {}
 ```
 
 Find and copy gradle build results (jars)

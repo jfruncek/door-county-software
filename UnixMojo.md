@@ -26,7 +26,7 @@ TERM=vt100
 Find an open port / lookup associated PID
 
 ```
-netstat -o
+netstat -aon
 ps -ef (cygwin: ps -eWf)
 ```
 

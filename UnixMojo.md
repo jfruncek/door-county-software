@@ -1,3 +1,7 @@
+Switch file formats on Linux
+
+set ff=unix
+
 Create a multiline file (also redirects stdout to file for other commands)
 
 ```

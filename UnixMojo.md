@@ -1,3 +1,9 @@
+Add sudoer on Centos
+
+```
+sudo usermod -aG wheel admin
+```
+
 Switch file formats on Linux
 
 ```

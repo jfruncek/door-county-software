@@ -1,16 +1,12 @@
 Restart Jetty at night
-
 ```
 crontab: 10 0 * * * ~/opt/jetty/bin/jetty.sh restart
 ```
 Add sudoer on Centos
-
 ```
 sudo usermod -aG wheel admin
 ```
-
 Switch file formats on Linux
-
 ```
 set ff=unix
 ```
@@ -33,15 +29,15 @@ Create an environment variable; use it in subsequent programs
 myvar='A value that wont be expanded'
 export myvar
 ```
-
 Set terminal mode
-
 ```
 TERM=vt100
 ```
-
+Find ports on which something is listening
+```
+sudo lsof -nP | grep LISTEN
+```
 Find an open port / lookup associated PID
-
 ```
 netstat -aon
 ps -ef (cygwin: ps -eWf)

@@ -1,3 +1,8 @@
+Restart Jetty at night
+
+```
+crontab: 10 0 * * * ~/opt/jetty/bin/jetty.sh restart
+```
 Add sudoer on Centos
 
 ```

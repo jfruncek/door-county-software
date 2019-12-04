@@ -6,6 +6,10 @@ Add sudoer on Centos
 ```
 sudo usermod -aG wheel admin
 ```
+Find CPU info
+```
+lscpu
+```
 Switch file formats on Linux
 ```
 set ff=unix

@@ -95,6 +95,12 @@ Find and copy gradle build results (jars)
  find . -regex '.*libs/.*jar' | xargs -i cp {} ../../tmp/jars/.
 ```
 
+Create tarball of certain files including paths
+
+```
+ find .jenkins/jobs -name config.xml -exec tar -rvf jobs.tar '{}' \;
+```
+
 List disk space usage
 
 ```

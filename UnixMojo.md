@@ -65,10 +65,10 @@ Remove the .svn directories
 find . -name '.svn' -exec rm -Rf '{}' \;
 ```
 
-Copy source, removing the '.svn' directories.
+Remove files older than a week
 
 ```
-dont know that I ever made this work
+find /tmp -type f -mtime +7 -exec rm -f {} \;
 ```
 
 Grep select files recursively

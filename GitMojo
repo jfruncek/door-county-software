@@ -1,0 +1,3 @@
+$ git pull -v --progress "origin"
+
+$ git push -- this command will give you the local branch push syntax to connect it with the remote

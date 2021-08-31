@@ -47,10 +47,12 @@ netstat -aon
 ps -ef (cygwin: ps -eWf)
 ```
 
-What is my IP on Solaris
+What is my IP?
 
 ```
-ifconfig -a
+hostname -I (Ubuntu, minimal)
+ip addr show (Ubuntu, all)
+ifconfig -a (Solaris)
 ```
 
 List all users

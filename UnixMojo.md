@@ -28,6 +28,12 @@ Create tarball of certain files including paths
  find .jenkins/jobs -name config.xml -exec tar -rvf jobs.tar '{}' \;
 ```
 
+Extract only certain files from a zip
+
+```
+ unzip -l 4144777710.zip | grep jpeg | sed 's/.* .* .* \(.*\)/\1/' | xargs -i unzip -j 4144777710_072314.zip {}
+```
+
 Find ports on which something is listening
 
 ```
@@ -115,12 +121,6 @@ Switch file formats on Linux
 
 ```
 set ff=unix
-```
-
-Extract only certain files from a zip
-
-```
- unzip -l 4144777710.zip | grep jpeg | sed 's/.* .* .* \(.*\)/\1/' | xargs -i unzip -j 4144777710_072314.zip {}
 ```
 
 What is my IP? (internal; for external use https://www.whatismyip.com/)

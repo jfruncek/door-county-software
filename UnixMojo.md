@@ -1,18 +1,6 @@
-Restart Jetty at night
-```
-crontab: 10 0 * * * ~/opt/jetty/bin/jetty.sh restart
-```
 Add sudoer on Centos
 ```
 sudo usermod -aG wheel admin
-```
-Find CPU info
-```
-lscpu
-```
-Switch file formats on Linux
-```
-set ff=unix
 ```
 
 Create a multiline file (also redirects stdout to file for other commands)
@@ -33,26 +21,30 @@ Create an environment variable; use it in subsequent programs
 myvar='A value that wont be expanded'
 export myvar
 ```
-Set terminal mode
+
+Create tarball of certain files including paths
+
 ```
-TERM=vt100
+ find .jenkins/jobs -name config.xml -exec tar -rvf jobs.tar '{}' \;
 ```
+
 Find ports on which something is listening
+
 ```
 sudo lsof -nP | grep LISTEN
 ```
+
 Find an open port / lookup associated PID
+
 ```
 netstat -aon
 ps -ef (cygwin: ps -eWf)
 ```
 
-What is my IP?
+Grep select files recursively
 
 ```
-hostname -I (Ubuntu, minimal)
-ip addr show (Ubuntu, all)
-ifconfig -a (Solaris)
+ find . -name *.java | xargs -i grep -H stark {}
 ```
 
 List all users
@@ -72,11 +64,9 @@ Remove files older than a week
 ```
 find /tmp -type f -mtime +7 -exec rm -f {} \;
 ```
-
-Grep select files recursively
-
+Restart Jetty at night
 ```
- find . -name *.java | xargs -i grep -H stark {}
+crontab: 10 0 * * * ~/opt/jetty/bin/jetty.sh restart
 ```
 
 Remove files recursively
@@ -97,20 +87,46 @@ Find and copy gradle build results (jars)
  find . -regex '.*libs/.*jar' | xargs -i cp {} ../../tmp/jars/.
 ```
 
-Create tarball of certain files including paths
+Set terminal mode
+```
+TERM=vt100
+```
+
+Show CPU info
 
 ```
- find .jenkins/jobs -name config.xml -exec tar -rvf jobs.tar '{}' \;
+lscpu
 ```
 
-List disk space usage
+Show disk space usage
 
 ```
 du -h --max-depth=1 <dir>
+```
+
+Show memory chips intalled
+
+```
+sudo dmidecode --type memory
+sudo lshw -c memory
+```
+
+Switch file formats on Linux
+
+```
+set ff=unix
 ```
 
 Extract only certain files from a zip
 
 ```
  unzip -l 4144777710.zip | grep jpeg | sed 's/.* .* .* \(.*\)/\1/' | xargs -i unzip -j 4144777710_072314.zip {}
+```
+
+What is my IP? (internal; for external use https://www.whatismyip.com/)
+
+```
+hostname -I (Ubuntu, minimal)
+ip addr show (Ubuntu, all)
+ifconfig -a (Solaris)
 ```

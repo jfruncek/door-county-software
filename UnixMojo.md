@@ -28,6 +28,12 @@ Create tarball of certain files including paths
  find .jenkins/jobs -name config.xml -exec tar -rvf jobs.tar '{}' \;
 ```
 
+Delete duplicate lines in a file without sorting it
+
+```
+awk '!seen[$0]++' file.txt
+```
+
 Extract only certain files from a zip
 
 ```

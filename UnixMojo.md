@@ -52,6 +52,11 @@ Find an open port / lookup associated PID
 netstat -aon
 ps -ef (cygwin: ps -eWf)
 ```
+Grep file to remove lines (pipe into another file)
+
+```
+grep --line-buffered -v filter file > anotherfile
+```
 
 Grep select files recursively
 

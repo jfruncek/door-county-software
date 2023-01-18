@@ -133,6 +133,15 @@ Switch file formats on Linux
 ```
 set ff=unix
 ```
+Use systemctl to manage services: list, enable/disable for startup on boot
+
+```
+sudo systemctl list-units
+sudo systemctl enable <unit>
+sudo systemctl disable <unit>
+
+```
+
 
 What is my IP? (internal; for external use https://www.whatismyip.com/)
 

@@ -70,6 +70,12 @@ List all users
 cat /etc/passwd |grep "/home" |cut -d: -f1
 ```
 
+List installed packages and versions
+
+```
+apt list --installed | less
+```
+
 Remove the .svn directories
 
 ```

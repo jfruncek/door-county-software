@@ -81,6 +81,11 @@ Remove the .svn directories
 ```
 find . -name '.svn' -exec rm -Rf '{}' \;
 ```
+Remove older log files
+
+```
+find /var/log -type f -regextype posix-extended -regex '.+log\.[[:digit:]]+.*' | xargs -i sudo rm {}
+```
 
 Remove files older than a week
 

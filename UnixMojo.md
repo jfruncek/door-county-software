@@ -75,6 +75,11 @@ List installed packages and versions
 ```
 apt list --installed | less
 ```
+Mark packages so they are not upgraded (no wildcards)
+
+```
+sudo apt-mark hold postgresql-16
+```
 
 Remove the .svn directories
 

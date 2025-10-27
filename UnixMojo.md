@@ -158,11 +158,16 @@ sudo systemctl disable <unit>
 
 ```
 
-
 What is my IP? (internal; for external use https://www.whatismyip.com/)
 
 ```
 hostname -I (Ubuntu, minimal)
 ip addr show (Ubuntu, all)
 ifconfig -a (Solaris)
+```
+
+Another external method
+
+```
+curl -s https://ifconfig.me
 ```
